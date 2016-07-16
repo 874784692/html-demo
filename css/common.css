@@ -1,0 +1,13 @@
+/*
+    去掉浏览器的默认样式
+*/
+*{
+    /* 去掉内边距 */
+    padding: 0;
+    /* 去掉外边距 */
+    margin: 0;
+    /* 去掉列表样式 */
+    list-style: none;
+    /* 去掉下划线 */
+    text-decoration: none;
+}
