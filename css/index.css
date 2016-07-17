@@ -1,0 +1,39 @@
+.index-nav {
+    /*背影颜色*/
+    background: #80bb01;
+}
+
+.index-nav .on a {
+    /*字体颜色*/
+    color: mediumturquoise;
+    /*背景颜色*/
+    background: magenta;
+    /*设置圆角*/
+    border-radius: 10px;
+}
+
+.index-nav ul {
+    /*子元素浮动，父元素设置溢出隐藏*/
+    overflow: hidden;
+}
+
+.index-nav li {
+    /*往左浮动*/
+    float: left;
+    /*设置平均宽度*/
+    width: 20%;
+    /* 设置文本居中*/
+    text-align: center;
+}
+
+.index-nav li a {
+    /*将a标签设置成块元素*/
+    display: block;
+    /*设置内边距*/
+    padding: 5px 10px;
+    /*设置外边距*/
+    margin: 5px 10px;
+    /*设置a标签链接颜色*/
+    color: #fff;
+    
+}
