@@ -27,6 +27,8 @@
 }
 
 .index-nav li a {
+    /*将置以我为定位布局*/
+    position: relative;
     /*将a标签设置成块元素*/
     display: block;
     /*设置内边距*/
@@ -35,5 +37,20 @@
     margin: 5px 10px;
     /*设置a标签链接颜色*/
     color: #fff;
-    
+}
+
+.index-nav li a::after {
+    content: "";
+    /*仂元素使用定位布局*/
+    position: absolute;
+    /*设置定位的位置*/
+    top: 5px;
+    right: -10px;
+    bottom: 5px;
+    /*设想边框*/
+    border-right: 1px #eee;
+    border-left: 1px #999;
+}
+.index-nav li:last-of-type a::after{
+    display: none;
 }
