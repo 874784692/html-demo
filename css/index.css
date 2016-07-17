@@ -48,9 +48,10 @@
     right: -10px;
     bottom: 5px;
     /*设想边框*/
-    border-right: 1px #eee;
-    border-left: 1px #999;
+    border-right: 1px solid #eee;
+    border-left: solid 1px #999;
 }
 .index-nav li:last-of-type a::after{
+    /*隐藏最后一个仂元素*/
     display: none;
 }
