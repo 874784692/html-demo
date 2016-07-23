@@ -1,0 +1,42 @@
+  * {
+      margin: 0;
+      padding: 0;
+  }
+  
+  #wrap {
+      background: #00C;
+      margin: 0 auto;
+      width: 960px;
+  }
+  
+  #header {
+      background: #ff3300;
+      width: 100%;
+  }
+  
+  #mainbody {
+      background: #FC0;
+      width: 100%;
+      overflow:  hidden;
+       
+  }
+  .left {
+      width: 800px;
+      height: 200px;
+      background: #000;
+      float: left;
+      margin-right:20px;
+  }
+  
+  .right {
+      width: 140px;
+      height: 500px;
+      background: #690;
+      float: left;
+  }
+  #footer {
+      background: #639;
+      width: 100%；
+  }
+  
+  
