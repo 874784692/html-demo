@@ -27,12 +27,20 @@
 			height: 125px;
 			border-bottom-style: ridge;
 			border-bottom-width: 50px;
+			border-top-style: inset;
+			border-top-width: 25px;
+		}
+		
+		.list .rim {
+			height: 25px;
+			border-bottom-style: ridge;
+			border-bottom-width: 108px;
 		}
 		
 		.list li img {
 			position: absolute;
 			border-image-width: 30 30;
-			padding: 0.3cm 0.5cm;
+			padding: 10px 10px;
 		}
 		
 		.list li .box {
@@ -54,20 +62,81 @@
 			right: 70px;
 		}
 		
-		.boxx {
+		.list .boxx {
 			padding: 20px 10px 10px 90px;
 		}
 		
-		.one {
-			position: fixed;
-			left: 20px;
-			top: 800px;
+		.catalog .biao {
+			height: 140px;
+			border-bottom-style: ridge;
+			border-bottom-width: 2px;
 		}
 		
-		.two {
+		.catalog.base {
 			position: fixed;
-			top: 800px;
+			left: 20px;
+			top: 840px;
+		}
+		
+		.catalog a {
+			display: block;
+		}
+		
+		.catalog .user {
+			position: relative;
+			height: 60px;
+			padding-left: 70px;
+		}
+		
+		.catalog .user .pic {
+			position: absolute;
+			left: 10px;
+			top: 10px;
+		}
+		
+		.catalog .hou {
+			position: absolute;
+			top: 20px;
+			right: 10px;
+			z-index: 1;
+			font-size: 15px;
+			color: #666;
+		}
+		
+		.catalog .t {
+			margin-bottom: 10px;
+			line-height: 50px;
+			font-size: 25px;
+			color: #000000;
+		}
+		
+		.catalog .con {
+			font-size: 20px;
+			color: #666;
+		}
+		
+		.catalog .title {
+			padding: 20px 10px 10px 90px;
+		}
+		
+		.footer .base {
+			position: fixed;
+			top: 840px;
+			left: 30px;
+		}
+		
+		.footer .bas {
+			position: fixed;
+			top: 840px;
 			right: 20px;
+		}
+		
+		.footer .cap {
+			padding: 0px 10px 10px 5px;
+		}
+		
+		.footer .titl {
+			padding: 0px 10px 10px 20px;
 		}
 	</style>
 
@@ -89,7 +158,6 @@
 			<div class="boxx">
 				<h1 class="tit">相册</h1>
 			</div>
-
 		</li>
 		<li>
 			<img src="images/4.jpg" width="60" height="60">
@@ -115,29 +183,63 @@
 				<h1 class="tit">表情</h1>
 			</div>
 		</li>
-		<li>
+		<li class="rim">
 			<img src="images/8.jpg" width="60" height="60">
 			<div class="boxx">
 				<h1 class="tit">设置</h1>
 			</div>
 		</li>
-		<footer class="footer">
-			<ul>
-				<div class="one">
-					<div>
-						<img src="images/9.jpg" width="40" height="40">
+	</ul>
+	<ul class="catalog">
+		<li class="biao">
+			<a href="">
+				<div class="user">
+					<div class="pic">
+						<img src="images/1.jpg">
 					</div>
+					<div class="title">
+						<h1 class="t">标题</h1>
+						<p class="con">内容</p>
+					</div>
+					<time class="hou">20:10</time>
+				</div>
+			</a>
+		</li>
+		<li class="biao">
+			<a href="">
+				<div class="user">
+					<div class="pic">
+						<img src="images/1.jpg">
+					</div>
+					<div class="title">
+						<h1 class="t">标题</h1>
+						<p class="con">内容</p>
+					</div>
+					<time class="hou">20:10</time>
+				</div>
+			</a>
+		</li>
+	</ul>
+	<footer class="footer">
+		<ul>
+			<li class="base">
+				<div>
+					<img src="images/9.jpg">
+				</div>
+				<div class="cap">
 					<h2>微信</h2>
 				</div>
-				<div class="two">
-					<div>
-						<img src="images/10.jpg" width="40" height="40">
-					</div>
-					<h2>我</h2>
+			</li>
+			<li class="bas">
+				<div>
+					<img src="images/10.jpg">
 				</div>
-			</ul>
-		</footer>
-	</ul>
+				<div>
+					<h3 class="titl">我</h3>
+				</div>
+			</li>
+		</ul>
+	</footer>
 </body>
 
 </html>
