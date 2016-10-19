@@ -32,19 +32,19 @@
 		}
 		
 		.list .rim {
-			height: 25px;
+			height: 0px;
 			border-bottom-style: ridge;
-			border-bottom-width: 108px;
+			border-bottom-width: 185px;
 		}
 		
 		.list li img {
 			position: absolute;
 			border-image-width: 30 30;
-			padding: 10px 10px;
+			padding: 10px 45px;
 		}
 		
 		.list li .box {
-			padding: 40px 10px 10px 140px;
+			padding: 40px 10px 10px 190px;
 		}
 		
 		.list .time {
@@ -58,12 +58,12 @@
 		
 		.list .ins {
 			position: absolute;
-			top: 35px;
-			right: 70px;
+			top: 60px;
+			right: 130px;
 		}
 		
 		.list .boxx {
-			padding: 20px 10px 10px 90px;
+			padding: 20px 10px 10px 130px;
 		}
 		
 		.catalog .biao {
@@ -90,14 +90,14 @@
 		
 		.catalog .user .pic {
 			position: absolute;
-			left: 10px;
+			left: 40px;
 			top: 10px;
 		}
 		
 		.catalog .hou {
 			position: absolute;
 			top: 20px;
-			right: 10px;
+			right: 35px;
 			z-index: 1;
 			font-size: 15px;
 			color: #666;
@@ -116,130 +116,166 @@
 		}
 		
 		.catalog .title {
-			padding: 20px 10px 10px 90px;
+			padding: 20px 10px 10px 130px;
 		}
 		
-		.footer .base {
+		.footer {
 			position: fixed;
-			top: 840px;
-			left: 30px;
+			left: 0px;
+			right: 0px;
+			bottom: 0px;
 		}
 		
 		.footer .bas {
-			position: fixed;
-			top: 840px;
-			right: 20px;
+			overflow: hidden;
+			text-align: center;
 		}
 		
-		.footer .cap {
-			padding: 0px 10px 10px 5px;
+		.footer .base {
+			float: left;
+			width: 25%;
 		}
 		
-		.footer .titl {
-			padding: 0px 10px 10px 20px;
+		.footer li {
+			color: #000;
+			font-size: 30px;
+		}
+		
+		.box {
+			display: none;
+			/*隐藏*/
 		}
 	</style>
 
+	<script type="text/javascript" src="js/tab.js">       
+	
 </head>
 
 <body>
-	<ul class="list">
-		<li class=" case">
-			<img src="images/1.jpg">
-			<div class="box">
-				<h1 class="tit">姓名</h1>
-			</div>
-			<div class="ins">
-				<img src="images/2.jpg" width="40" height="40">
-			</div>
-		</li>
-		<li class="titm">
-			<img src="images/3.jpg" width="60" height="60">
-			<div class="boxx">
-				<h1 class="tit">相册</h1>
-			</div>
-		</li>
-		<li>
-			<img src="images/4.jpg" width="60" height="60">
-			<div class="boxx">
-				<h1 class="tit">收藏</h1>
-			</div>
-		</li>
-		<li class="titm">
-			<img src="images/5.jpg" width="60" height="60">
-			<div class="boxx">
-				<h1 class="tit">钱包</h1>
-			</div>
-		</li>
-		<li>
-			<img src="images/6.jpg" width="60" height="60">
-			<div class="boxx">
-				<h1 class="tit">卡券</h1>
-			</div>
-		</li>
-		<li>
-			<img src="images/7.jpg" width="60" height="60">
-			<div class="boxx">
-				<h1 class="tit">表情</h1>
-			</div>
-		</li>
-		<li class="rim">
-			<img src="images/8.jpg" width="60" height="60">
-			<div class="boxx">
-				<h1 class="tit">设置</h1>
-			</div>
-		</li>
-	</ul>
-	<ul class="catalog">
-		<li class="biao">
-			<a href="">
-				<div class="user">
-					<div class="pic">
-						<img src="images/1.jpg">
+	<div>
+		<div id="con_one_1" onclick="settab('one'1,)" class="box" style="display:block">
+			<ul class="catalog">
+				<li class="biao">
+					<div class="user">
+						<div class="pic">
+							<img src="images/1.jpg">
+						</div>
+						<div class="title">
+							<h1 class="t">标题</h1>
+							<p class="con">内容</p>
+						</div>
+						<time class="hou">20:10</time>
 					</div>
-					<div class="title">
-						<h1 class="t">标题</h1>
-						<p class="con">内容</p>
+				</li>
+			</ul>
+		</div>
+		<div id="con_one_2" onclick="settab('one'2,)" class="box">
+			<ul class="catalog">
+				<li class="biao">
+					<div class="user">
+						<div class="pic">
+							<img src="images/1.jpg">
+						</div>
+						<div class="title">
+							<h1 class="t">标题</h1>
+							<p class="con">内容</p>
+						</div>
+						<time class="hou">20:10</time>
 					</div>
-					<time class="hou">20:10</time>
-				</div>
-			</a>
-		</li>
-		<li class="biao">
-			<a href="">
-				<div class="user">
-					<div class="pic">
-						<img src="images/1.jpg">
+				</li>
+			</ul>
+		</div>
+		<div id="con_one_3" onclick="settab('one'3,)" class="box">
+			<ul class="catalog">
+				<li class="biao">
+					<div class="user">
+						<div class="pic">
+							<img src="images/1.jpg">
+						</div>
+						<div class="title">
+							<h1 class="t">标题</h1>
+							<p class="con">内容</p>
+						</div>
+						<time class="hou">20:10</time>
 					</div>
-					<div class="title">
-						<h1 class="t">标题</h1>
-						<p class="con">内容</p>
+				</li>
+			</ul>
+		</div>
+		<div id="con_one_4" onclick="settab('one'4,)" class="box">
+			<ul class="list">
+				<li class="case">
+					<img src="images/1.jpg">
+					<div class="box">
+						<h1 class="tit">姓名</h1>
 					</div>
-					<time class="hou">20:10</time>
-				</div>
-			</a>
-		</li>
-	</ul>
-	<footer class="footer">
-		<ul>
-			<li class="base">
-				<div>
-					<img src="images/9.jpg">
-				</div>
-				<div class="cap">
-					<h2>微信</h2>
-				</div>
-			</li>
-			<li class="bas">
-				<div>
-					<img src="images/10.jpg">
-				</div>
-				<div>
-					<h3 class="titl">我</h3>
-				</div>
-			</li>
-		</ul>
-	</footer>
+					<div class="ins">
+						<img src="images/2.jpg" width="40" height="40">
+					</div>
+				</li>
+				<li class="titm">
+					<img src="images/3.jpg" width="60" height="60">
+					<div class="boxx">
+						<h1 class="tit">相册</h1>
+					</div>
+				</li>
+				<li>
+					<img src="images/4.jpg" width="60" height="60">
+					<div class="boxx">
+						<h1 class="tit">收藏</h1>
+					</div>
+				</li>
+				<li class="titm">
+					<img src="images/5.jpg" width="60" height="60">
+					<div class="boxx">
+						<h1 class="tit">钱包</h1>
+					</div>
+				</li>
+				<li>
+					<img src="images/6.jpg" width="60" height="60">
+					<div class="boxx">
+						<h1 class="tit">卡券</h1>
+					</div>
+				</li>
+				<li>
+					<img src="images/7.jpg" width="60" height="60">
+					<div class="boxx">
+						<h1 class="tit">表情</h1>
+					</div>
+				</li>
+				<li class="rim">
+					<img src="images/8.jpg" width="60" height="60">
+					<div class="boxx">
+						<h1 class="tit">设置</h1>
+					</div>
+				</li>
+			</ul>
+		</div>
+		<footer class="footer">
+			<ul id="nav" class="bas">
+				<li id="one1" class="base">
+					<div>
+						<img src="images/9.jpg" width="70" height="70">
+					</div>微信
+				</li>
+				<li id="one2" class="base">
+					<div>
+						<img src="images/10.jpg" width="70" height="70">
+					</div>通讯录
+				</li>
+				<li id="one3" class="base">
+					<div>
+						<img src="images/11.jpg" width="70" height="70">
+					</div>发现
+				</li>
+				<li id="one4" class="base">
+					<div>
+						<img src="images/12.jpg" width="70" height="70">
+					</div>我
+				</li>
+			</ul>
+		</footer>
+	</div>
+
 </body>
 
 </html>

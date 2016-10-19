@@ -19,6 +19,7 @@
 			background: #ccc;
 			display: none;
 		}
+		
 	</style>
 	<script type="text/javascript">
 	window.onload=function ()
@@ -36,22 +37,23 @@
 									aBtn[i].className='';/*给所有的（active）写成空的，也就是去掉他的（active）然后只把当前的按钮设置成（active）*/
 									aDiv[i].style.display="none";/*让所有div变成'none'隐藏掉*/
 							}
-							aDiv[this.index].style.display='block';/*只籽当前的div显示*/
+							aDiv[this.index].style.display='block';/*只让当前的div显示*/
 							this.className='active';/*让当前被点击的按钮变成(active)*/
 					}
 			}
 	}
 	</script>
 </head>
-
+	
 
 <body>
-	<input class="active" type="button" value="1">
+	<input class="active" type="button" value="我">
 	<input type="button" value="2">
 	<input type="button" value="3">
 	<div style="display:block;">q</div>
 	<div>w</div>
 	<div>e</div>
+	
 </body>
 
 </html>
