@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		* {
+			padding: 0;
+			margin: 0;
+			list-style: none;
+		}
+		
+		.box-163css {
+			width: 500px;
+			border: 1px solid #ccc;
+			margin: 20px auto;
+			height: 400px;
+		}
+		
+		#nav {
+			width: 100%;
+			float: left;
+		}
+		
+		#nav li {
+			height: 30px;
+			line-height: 30px;
+			float: left;
+			width: 100px;
+		}
+		
+		#nav li.hover {
+			color: #fcc;
+		}
+		
+		.box {
+			border-top: 1px solid #ccc;
+			height: 320;
+			float: left;
+			width: 100%;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript" src="jquery.js"></script>
+	<script type="text/javascript">      
+	$(document).ready(function () {
+    $('#nav li').click(function () {
+        var i = $(this).index();
+        $(this).siblings().renoveClass('hover');
+        $(this).addClass('hover');
+        $('.box').hide();
+        $('.box').eq(i).show();
+    }
+    )
+})
+	</script>
+</head>
+
+<body>
+	<div class="box-163css">
+		<ul id="nav">
+			<li class="hover">首页</li>
+			<li>产品</li>
+			<li>简介</li>
+		</ul>
+		<div class="box" style="display:block">首页信息</div>
+		<div class="box">产品信息</div>
+		<div class="box">介绍信息</div>
+	</div>
+	
+</body>
+
+</html>
