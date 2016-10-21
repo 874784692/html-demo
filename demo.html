@@ -147,7 +147,7 @@
 			width: 25%;
 		}
 		
-		.box {
+		.page-box {
 			display: none;
 			/*隐藏*/
 		}
@@ -160,7 +160,7 @@
 
 <body>
 
-	<div class="box" style="display:block">
+	<div class="page-box" style="display:block">
 		<ul class="catalog">
 			<li class="biao">
 				<div class="user">
@@ -176,7 +176,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="box">
+	<div class="page-box">
 		<ul class="catalog">
 			<li class="biao">
 				<div class="user">
@@ -192,7 +192,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="box">
+	<div class="page-box">
 		<ul class="catalog">
 			<li class="biao">
 				<div class="user">
@@ -208,7 +208,7 @@
 			</li>
 		</ul>
 	</div>
-	<div class="box">
+	<div class="page-box">
 		<ul class="list">
 			<li class="case">
 				<img src="images/1.jpg">
@@ -281,6 +281,27 @@
 			</li>
 		</ul>
 	</footer>
+	<script>
+		;(function () {
+			var nav = document.getElementById('nav') //获取nav
+			var navLi = nav.getElementsByTagName('li') //获取nav下面所有的li标签
+			var pageList = document.getElementsByClassName('page-box') //获取所有的box元素
+
+			for (var i = 0;i < navLi.length; i++) { //循环所有的li标签
+				navLi[i].index = i
+				navLi[i].onclick = function () { //给所有的li标签绑定click事件
+
+					for(var i = 0;i < pageList.length;i++) { //获取所有的box元素
+						navLi[i].className = 'base'
+						pageList[i].style.display = 'none' //先隐藏所有的box
+					}
+					this.className = 'hover'
+					pageList[this.index].style.display = 'block' //显示当前对应的box
+				}
+			}
+
+		})()
+	</script>
 	</div>
 
 </body>

@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		/*
+    去掉浏览器的默认样式
+*/
+		
+		* {
+			/* 去掉内边距 */
+			padding: 0;
+			/* 去掉外边距 */
+			margin: 0;
+			/* 去掉列表样式 */
+			list-style: none;
+			/* 去掉下划线 */
+			text-decoration: none;
+		}
+		
+		.header {
+			background: #ff7a18;
+			border-bottom: solid 1px #cd530e;
+			color: #fff;
+			height: 50px;
+			line-height: 50px;
+			font-size: 20px;
+			padding: 0 15px;
+		}
+		
+		.header .title {
+			text-align: center;
+		}
+		
+		.nav {
+			height: 44px;
+			line-height: 44px;
+			background: #fff;
+			border-bottom: solid 1px #eae3d3;
+		}
+		
+		.box {
+			display: -webkit-box;
+			-webkit-box-orient: horizontal;
+			-webkit-box-pack: justify;
+		}
+		
+		ul,
+		ol {
+			list-style: none outside none;
+		}
+		
+		.nav li {
+			text-align: center;
+			font-size: 16px;
+		}
+		
+		.box-item {
+			box-flex: 1;
+			-webkit-box-flex: 1;
+		}
+		
+		.nav li a {
+			margin-right: 25px;
+			display: block;
+			color: #262626;
+		}
+		
+		.nav li a.active {
+			color: #dd5114;
+			border-bottom: solid 2px #f5682b;
+		}
+		
+		box {
+			display: -webkit-box;
+			-webkit-box-orient: horizontal;
+			-webkit-box-pack: justify;
+		}
+		
+		.hotRead {
+			margin-top: 6px;
+			overflow: hidden;
+			height: 86px;
+		}
+		
+		.hotRead .box-item {
+			display: block;
+			width: 50%;
+		}
+		
+		box-item img {
+			width: 97%;
+			margin-right: 3%;
+		}
+		
+		.hotRead img {
+			height: 86px;
+			box-shadow: 0 0 4px rgba(0, 0, 0, .5);
+		}
+		
+		.box-item img {
+			width: 97%;
+			margin-right: 3%;
+		}
+		
+		.module {
+			margin-top: 6px;
+			background: #fff;
+			border: 1px solid #dad0df;
+		}
+		
+		#choice .colorx {
+			color: #d12727;
+		}
+		
+		.module .module-title {
+			color: #d12727;
+			font-size: 16px;
+			padding-left: 10px;
+			background: #fefdf9;
+			height: 40px;
+			line-height: 40px;
+			border-bottom: 1px solid #ece6dc;
+		}
+		
+		.module-title {
+			position: relative;
+		}
+		
+		.item {
+			position: relative;
+			display: box;
+			display: -webkit-box;
+			padding: 10px 0;
+			margin: 0 10px;
+			border-bottom: 1px solid #eae3d3;
+		}
+		
+		body a {
+			color: #262626;
+		}
+		
+		.item .item-cover {
+			position: relative;
+			box-shadow: 1px 1px 2px #c8c8c8;
+			-webkit-box-shadow: 1px 1px 2px #c8c8c8;
+			width: 54px;
+			height: 72px;
+		}
+		
+		.item .item-cover .img {
+			width: 100%;
+			height: 100%;
+			background-size: contain;
+			-webkit-background-size: cover;
+		}
+		
+		.item .item-cover .cover-mask {
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: inline-block;
+			width: 26px;
+			height: 26px;
+			background: url(http://m.baidu.com/static/tf/alaxs/book/superscript.png) no-repeat;
+			background-size: 26px 26px;
+		}
+		
+		.item .item-detail {
+			box-flex: 1;
+			-webkit-box-flex: 1;
+			display: box;
+			display: -webkit-box;
+			-webkit-box-orient: vertical;
+			margin-left: 10px;
+		}
+		
+		.item .item-detail .detail-title {
+			font-size: 18px;
+			color: #262626;
+			line-height: 1;
+		}
+		
+		.item .cut {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+		}
+		
+		.item .item-detail .detail-info {
+			display: box;
+			display: -webkit-box;
+			margin: 9px 0 7px;
+			font-size: 12px;
+			color: #777;
+		}
+		
+		.item .item-detail .detail-info .inline-box {
+			display: inline-block;
+		}
+		
+		.item .item-detail .detail-info .inline-box .split {
+			margin: 0 5px;
+		}
+		
+		.item .item-detail .detail-intro {
+			width: 95%;
+			font-size: 12px;
+			line-height: 1.25;
+			color: #777;
+		}
+		
+		.module {
+			margin-top: 6px;
+			background: #fff;
+			border: 1px solid #dad0df;
+		}
+		
+		.module .module-footer {
+			display: block;
+			border-top: 1px solid #ece6dc;
+			font-size: 16px;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+		}
+		
+		.item .item-detail .detail-title {
+			font-size: 18px;
+			color: #262626;
+			line-height: 1;
+		}
+		
+		.item .cut {
+			overflow: hidden;
+			text-overflow: ellipsis;
+			display: -webkit-box;
+			-webkit-line-clamp: 1;
+			-webkit-box-orient: vertical;
+			border-color: #7CFC00;
+		}
+		
+		.topic .item .inline-box:nth-child(1) .tag {
+			color: #551A8B;
+		}
+		
+		.topic .item .tag {
+			padding: 1px 2px;
+			border: solid 1px #ccc;
+			margin-right: 5px;
+			border-radius: 2px;
+		}
+		
+		.topic .item .inline-box:nth-child(2) .tag {
+			color: red;
+		}
+		
+		.module {
+			margin-top: 6px;
+			background: #fff;
+			border: 1px solid #dad0df;
+		}
+		
+		.tab-bar {
+			height: 44px;
+			line-height: 44px;
+			border-bottom: solid 1px #ece6dc;
+		}
+		
+		.tab-bar .box-item.current {
+			color: #f5682b;
+			border-bottom: solid 2px #f5682b;
+		}
+		
+		.tab-bar .box-item {
+			text-align: center;
+			font-size: 16px;
+		}
+		
+		.novelList .item {
+			border-bottom: solid 1px #ece6dc;
+		}
+		
+		.novel-item .item-title {
+			width: 35%;
+			padding-right: 5%;
+			font-size: 16px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+		}
+		
+		.novel-item .item-desc {
+			width: 52%;
+			color: #777;
+			font-size: 12px;
+			white-space: nowrap;
+			text-overflow: ellipsis;
+			overflow: hidden;
+			padding-right: 8%;
+		}
+		
+		.novel-item {
+			height: 40px;
+			line-height: 40px;
+			border-bottom: solid 1px #ece6dc;
+		}
+		
+		.footer .footer-icon {
+			text-align: center;
+			margin-bottom: 10px;
+		}
+		
+		.footer .footer-icon .icon-decoration {
+			width: 64px;
+			height: 13px;
+			background: url(http://m.baidu.com/static/tf/alaxs/book/decoration.png) no-repeat;
+			background-size: 64px 13px;
+		}
+		
+		.footer .footer-icon span {
+			display: inline-block;
+		}
+		
+		.footer .footer-icon .bi-logo {
+			font-size: 26px;
+			color: #c7beaf;
+		}
+		
+		.bi {
+			font-family: icomoon!important;
+			speak: none;
+			font-style: normal;
+			font-weight: 400;
+			font-variant: normal;
+			text-transform: none;
+			line-height: 1;
+			-webkit-font-smoothing: antialiased;
+			-moz-osx-font-smoothing: grayscale;
+		}
+		
+		.footer .footer-icon .icon-decoration.decoration-right {
+			transform: rotatey(-180deg);
+		}
+		
+		.footer .footer-line {
+			height: 1px;
+			line-height: 1px;
+			border-top: solid 2px #dad0bf;
+			overflow: hidden;
+		}
+		
+		.footer .footer-text p {
+			font-size: 12px;
+			color: #c7beae;
+			height: 30px;
+			line-height: 30px;
+		}
+		
+		p {
+			display: block;
+			-webkit-margin-before: 1em;
+			-webkit-margin-after: 1em;
+			-webkit-margin-start: 0px;
+			-webkit-margin-end: 0px;
+		}
+		
+		.footer .footer-text p.author {
+			text-align: right;
+		}
+		
+		.xiao {
+			display: block;
+			border-top: 1px solid #ece6dc;
+			font-size: 16px;
+			text-align: center;
+			height: 40px;
+			line-height: 40px;
+			background: #ff7a18;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="xiao">
+		<samp class="samp" style="color:#FFFFE0">小说书城</samp></div>
+	<ul class="nav box">
+		<li class="box-item"><a href="/bag">书包</a></li>
+		<li class="box-item"><a href="/" class="active" style="color: red;">精选</a></li>
+		<li class="box-item"><a href="/rank">排行</a></li>
+		<li class="box-item"><a href="/cate">分类</a></li>
+	</ul>
+	<div class="content">
+		<div class="hotRead box">
+			<a class="box-item" href="javascript:void(0)"><img src="http://bos.box.bdimg.com/mcoweb-searchbox/tmp/1476674179_2947.jpg"></a>
+			<a class="box-item" href="javascript:void(0)"><img src="http://bos.box.bdimg.com/mcoweb-searchbox/tmp/1476674165_6833.jpg"></a>
+		</div>
+	</div>
+	<div class="module">
+		<div class="module-title colorx"><span>重磅推荐</span>
+		</div>
+		<a class="item" href="javascript:void(0)">
+			<div class="item-cover">
+				<div class="img" style="background-image: url(&quot;https://ss3.baidu.com/9fo3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/4afbfbedab64034fddb8bfe8a7c379310b551de2.jpg&quot;);">
+				</div>
+				<div class="cover-mask"></div>
+			</div>
+			<div class="item-detail">
+				<div class="detail-title cut">魂天剑</div>
+				<div class="detail-info box cut">
+					<div class="inline-box">
+						<span class="tag">男频</span>
+					</div>
+					<div class="inline-box">
+						<span class="split">|</span>
+						<span class="tag">仙侠</span>
+					</div>
+					<div class="inline-box">
+						<span class="split">|</span>
+						<span class="tag">古典仙侠</span>
+					</div>
+				</div>
+				<div class="detail-intro cut">注定成为神的生灵，却不愿成为神。</div>
+			</div>
+			<div class="item-mark"></div>
+		</a>
+		<a class="item" href="javascript:void(0)">
+			<div class="item-cover">
+				<div class="img" style="background-image: url(&quot;https://ss2.baidu.com/-vo3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/0ff41bd5ad6eddc4db56c6743fdbb6fd5366338f.jpg&quot;);">
+				</div>
+				<div class="cover-mask"></div>
+			</div>
+			<div class="item-detail">
+				<div class="detail-title cut">闪婚游戏</div>
+				<div class="detail-info box cut">
+					<div class="inline-box">
+						<span class="tag">女频</span>
+					</div>
+					<div class="inline-box">
+						<span class="split">|</span>
+						<span class="tag">现代言情</span>
+					</div>
+					<div class="inline-box">
+						<span class="split">|</span>
+						<span class="tag">浪漫言情</span>
+					</div>
+				</div>
+				<div class="detail-intro cut">一不小心就不知道床上怎么多了一个男人，明明是误会可是这个大叔非要自己负责</div>
+			</div>
+			<div class="item-mark"></div>
+		</a>
+		<a class="item" href="javascript:void(0)">
+			<div class="item-cover">
+				<div class="img" style="background-image: url(&quot;https://ss1.baidu.com/-4o3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/6c224f4a20a446230c6da0f49e22720e0df3d784.jpg&quot;);">
+				</div>
+				<div class="cover-mask"></div>
+			</div>
+			<div class="item-detail">
+				<div class="detail-title cut">巡狩大明</div>
+				<div class="detail-info box cut">
+					<div class="inline-box">
+						<span class="tag">男频</span>
+					</div>
+					<div class="inline-box">
+						<span class="split">|</span>
+						<span class="tag">历史</span>
+					</div>
+					<div class="inline-box">
+						<span class="split">|</span>
+						<span class="tag">历史传记</span>
+					</div>
+				</div>
+				<div class="detail-intro cut">宅男段飞穿越到了明朝中叶，连破大案，成了名噪一时的‘神捕’！</div>
+			</div>
+			<div class="item-mark"></div>
+		</a>
+	</div>
+	<div class="topic">
+		<div class="module">
+			<div class="module-title colorx"><span>类型阅读</span>
+			</div>
+			<div class="items">
+				<a class="item" href="/subjectdetail?module_id=240&amp;module_type=2&amp;query=%E4%B8%93%E9%A2%98%E8%AF%A6%E6%83%85">
+					<div class="item-cover">
+						<div class="img" style="background-image: url(&quot;http://bos.box.bdimg.com/mcoweb-searchbox/tmp/1475219855_8310.jpg&quot;);">
+						</div>
+						<div class="cover-mask"></div>
+					</div>
+					<div class="item-detail">
+						<div class="detail-title cut">小长假的悠闲时光</div>
+						<div class="detail-info box cut">
+							<div class="inline-box">
+								<span class="tag">畅销</span>
+							</div>
+							<div class="inline-box">
+								<span class="split">|</span>
+								<span class="tag">精选</span>
+							</div>
+							<div class="inline-box">
+								<span class="split">|</span>
+								<span class="tag">冒险</span>
+							</div>
+						</div>
+						<div class="detail-intro cut">十本免费好书陪你度过假期~</div>
+					</div>
+					<div class="item-mark"></div>
+				</a>
+				<a class="item" href="/subjectdetail?module_id=237&amp;module_type=2&amp;query=%E4%B8%93%E9%A2%98%E8%AF%A6%E6%83%85">
+					<div class="item-cover">
+						<div class="img" style="background-image: url(&quot;http://bos.box.bdimg.com/mcoweb-searchbox/tmp/1474120538_8892.jpg&quot;);">
+						</div>
+						<div class="cover-mask"></div>
+					</div>
+					<div class="item-detail">
+						<div class="detail-title cut">结发授长生</div>
+						<div class="detail-info box cut">
+							<div class="inline-box">
+								<span class="tag">仙侠</span>
+							</div>
+							<div class="inline-box">
+								<span class="split">|</span>
+								<span class="tag">幻想时空</span>
+							</div>
+							<div class="inline-box">
+								<span class="split">|</span>
+								<span class="tag">女强</span>
+							</div>
+						</div>
+						<div class="detail-intro cut">修行本逆天，无惧灾与难；长生不忘情，唯愿君相伴。</div>
+					</div>
+					<div class="item-mark"></div>
+				</a>
+			</div><a class="module-footer" href="/subjectlist?query=%E5%85%A8%E9%83%A8%E4%B8%93%E9%A2%98">查看全部专题</a></div>
+	</div>
+	<div class="module tabRead">
+		<div class="module-title">男生爱看</div>
+		<ul class="tab-bar box">
+			<li class="box-item current">玄幻</li>
+			<li class="box-item">都市</li>
+			<li class="box-item">悬疑</li>
+			<li class="box-item">出版</li>
+		</ul>
+		<div class="novelList">
+			<a class="item" href="javascript:void(0)">
+				<div class="item-cover">
+					<div class="img" style="background-image: url(&quot;https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/cefc1e178a82b901e374a4e37b8da9773812ef01.jpg&quot;);">
+					</div>
+					<div class="cover-mask"></div>
+				</div>
+				<div class="item-detail">
+					<div class="detail-title cut">生命裁决</div>
+					<div class="detail-info box cut">
+						<div class="inline-box">
+							<span class="tag">男频</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">玄幻</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">东方玄幻</span>
+						</div>
+					</div>
+					<div class="detail-intro cut">纯真少年惨遭灭族，为报仇为变强，他浴血重生踏破仙途。</div>
+				</div>
+				<div class="item-mark"></div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">混世散仙</div>
+				<div class="item-desc box-item">不一样的修真之旅，原来，散仙并不是修真失败的产物，散仙，也是可以这么彪悍的。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">玄门妖修</div>
+				<div class="item-desc box-item">世间万千生灵苦苦修行，所争不过是那茫茫大道中的一线生机。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">天之旅</div>
+				<div class="item-desc box-item">没有天地，就没有生命，人类更是不存！</div>
+			</a>
+		</div>
+		<a class="module-footer" href="/choicechannel?page_id=18&amp;query=%E7%94%B7%E9%A2%91">进入男生爱看</a>
+	</div>
+	<div class="module tabRead">
+		<div class="module-title">女生爱看</div>
+		<ul class="tab-bar box">
+			<li class="box-item current">豪门</li>
+			<li class="box-item">青春</li>
+			<li class="box-item">穿越</li>
+			<li class="box-item">出版</li>
+		</ul>
+		<div class="novelList">
+			<a class="item" href="javascript:void(0)">
+				<div class="item-cover">
+					<div class="img" style="background-image: url(&quot;https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/7dd98d1001e9390132a9dbb17dec54e737d19691.jpg&quot;);">
+					</div>
+					<div class="cover-mask"></div>
+				</div>
+				<div class="item-detail">
+					<div class="detail-title cut">贴身甜宠</div>
+					<div class="detail-info box cut">
+						<div class="inline-box">
+							<span class="tag">女频</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">现代言情</span></div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">总裁豪门</span>
+						</div>
+					</div>
+					<div class="detail-intro cut">相恋四年的学长出国前邀请开房，却拿错了房卡，上错了洛尧擢的床。</div>
+				</div>
+				<div class="item-mark"></div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">豪门第一妖夫</div>
+				<div class="item-desc box-item">重生归来，她绽放出了她本该拥有的光芒，更是将她迷人的魅力毫无保留。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">腹黑邪少，骗子老婆往哪逃</div>
+				<div class="item-desc box-item">传言墨家少爷长得倾国殃民，如沐春风好吧!那关她屁事！</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">逃爱暖妻</div>
+				<div class="item-desc box-item">她为了给父亲治病，甘愿出卖自己，却不小心进了他的房间</div>
+			</a>
+		</div>
+		<a class="module-footer" href="/choicechannel?page_id=19&amp;query=%E5%A5%B3%E9%A2%91">进入女生爱看</a>
+	</div>
+	<div class="footer">
+		<div class="footer-icon">
+			<span class="icon-decoration decoration-left"></span>
+			<span class="bi bi-logo"></span>
+			<span class="icon-decoration decoration-right"></span>
+		</div>
+		<div class="footer-line"></div>
+		<div class="footer-text">
+			<p>“比鬼神更可怕的，是人心。”</p>
+			<p class="author">--盗墓笔记</p>
+		</div>
+		<div class="footer-line"></div>
+	</div>
+</body>
+
+</html>
