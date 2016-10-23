@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="UTF-8">
-	<title>Document</title>
+	<title>书城</title>
 	<style type="text/css">
 		/*
     去掉浏览器的默认样式
@@ -382,6 +382,11 @@
 			line-height: 40px;
 			background: #ff7a18;
 		}
+		
+		.page-box {
+			display: none;
+			/*隐藏*/
+		}
 	</style>
 </head>
 
@@ -536,15 +541,15 @@
 				</a>
 			</div><a class="module-footer" href="/subjectlist?query=%E5%85%A8%E9%83%A8%E4%B8%93%E9%A2%98">查看全部专题</a></div>
 	</div>
-	<div class="module tabRead">
+	<div  id="nav" class="module tabRead">
 		<div class="module-title">男生爱看</div>
 		<ul class="tab-bar box">
-			<li class="box-item current">玄幻</li>
-			<li class="box-item">都市</li>
-			<li class="box-item">悬疑</li>
-			<li class="box-item">出版</li>
+			<li  class="box-item current">玄幻</li>
+			<li  class="box-item">都市</li>
+			<li  class="box-item">悬疑</li>
+			<li  class="box-item">出版</li>
 		</ul>
-		<div class="novelList">
+		<div class="page-box" style="display:block">
 			<a class="item" href="javascript:void(0)">
 				<div class="item-cover">
 					<div class="img" style="background-image: url(&quot;https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/cefc1e178a82b901e374a4e37b8da9773812ef01.jpg&quot;);">
@@ -583,9 +588,128 @@
 				<div class="item-desc box-item">没有天地，就没有生命，人类更是不存！</div>
 			</a>
 		</div>
+		<div class="page-box">
+			<a class="item" href="javascript:void(0)">
+				<div class="item-cover">
+					<div class="img" style="background-image: url(&quot;https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/cefc1e178a82b901e374a4e37b8da9773812ef01.jpg&quot;);">
+					</div>
+					<div class="cover-mask"></div>
+				</div>
+				<div class="item-detail">
+					<div class="detail-title cut">白领练神记</div>
+					<div class="detail-info box cut">
+						<div class="inline-box">
+							<span class="tag">男频</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">玄幻</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">东方玄幻</span>
+						</div>
+					</div>
+					<div class="detail-intro cut">纯真少年惨遭灭族，为报仇为变强，他浴血重生踏破仙途。</div>
+				</div>
+				<div class="item-mark"></div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">混世散仙</div>
+				<div class="item-desc box-item">不一样的修真之旅，原来，散仙并不是修真失败的产物，散仙，也是可以这么彪悍的。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">玄门妖修</div>
+				<div class="item-desc box-item">世间万千生灵苦苦修行，所争不过是那茫茫大道中的一线生机。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">天之旅</div>
+				<div class="item-desc box-item">没有天地，就没有生命，人类更是不存！</div>
+			</a>
+		</div>
+		<div class="page-box">
+			<a class="item" href="javascript:void(0)">
+				<div class="item-cover">
+					<div class="img" style="background-image: url(&quot;https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/cefc1e178a82b901e374a4e37b8da9773812ef01.jpg&quot;);">
+					</div>
+					<div class="cover-mask"></div>
+				</div>
+				<div class="item-detail">
+					<div class="detail-title cut">女法医之骨头收藏家</div>
+					<div class="detail-info box cut">
+						<div class="inline-box">
+							<span class="tag">男频</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">玄幻</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">东方玄幻</span>
+						</div>
+					</div>
+					<div class="detail-intro cut">纯真少年惨遭灭族，为报仇为变强，他浴血重生踏破仙途。</div>
+				</div>
+				<div class="item-mark"></div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">混世散仙</div>
+				<div class="item-desc box-item">不一样的修真之旅，原来，散仙并不是修真失败的产物，散仙，也是可以这么彪悍的。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">玄门妖修</div>
+				<div class="item-desc box-item">世间万千生灵苦苦修行，所争不过是那茫茫大道中的一线生机。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">天之旅</div>
+				<div class="item-desc box-item">没有天地，就没有生命，人类更是不存！</div>
+			</a>
+		</div>
+		<div class="page-box">
+			<a class="item" href="javascript:void(0)">
+				<div class="item-cover">
+					<div class="img" style="background-image: url(&quot;https://ss1.baidu.com/9vo3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/cefc1e178a82b901e374a4e37b8da9773812ef01.jpg&quot;);">
+					</div>
+					<div class="cover-mask"></div>
+				</div>
+				<div class="item-detail">
+					<div class="detail-title cut">生命裁决</div>
+					<div class="detail-info box cut">
+						<div class="inline-box">
+							<span class="tag">男频</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">玄幻</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">东方玄幻</span>
+						</div>
+					</div>
+					<div class="detail-intro cut">纯真少年惨遭灭族，为报仇为变强，他浴血重生踏破仙途。</div>
+				</div>
+				<div class="item-mark"></div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">混世散仙</div>
+				<div class="item-desc box-item">不一样的修真之旅，原来，散仙并不是修真失败的产物，散仙，也是可以这么彪悍的。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">玄门妖修</div>
+				<div class="item-desc box-item">世间万千生灵苦苦修行，所争不过是那茫茫大道中的一线生机。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">天之旅</div>
+				<div class="item-desc box-item">没有天地，就没有生命，人类更是不存！</div>
+			</a>
+		</div>
+
 		<a class="module-footer" href="/choicechannel?page_id=18&amp;query=%E7%94%B7%E9%A2%91">进入男生爱看</a>
 	</div>
-	<div class="module tabRead">
+
+	<div  class="module tabRead">
 		<div class="module-title">女生爱看</div>
 		<ul class="tab-bar box">
 			<li class="box-item current">豪门</li>
@@ -593,7 +717,7 @@
 			<li class="box-item">穿越</li>
 			<li class="box-item">出版</li>
 		</ul>
-		<div class="novelList">
+		<div >
 			<a class="item" href="javascript:void(0)">
 				<div class="item-cover">
 					<div class="img" style="background-image: url(&quot;https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/7dd98d1001e9390132a9dbb17dec54e737d19691.jpg&quot;);">
@@ -631,6 +755,121 @@
 				<div class="item-desc box-item">她为了给父亲治病，甘愿出卖自己，却不小心进了他的房间</div>
 			</a>
 		</div>
+		<div >
+			<a class="item" href="javascript:void(0)">
+				<div class="item-cover">
+					<div class="img" style="background-image: url(&quot;https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/7dd98d1001e9390132a9dbb17dec54e737d19691.jpg&quot;);">
+					</div>
+					<div class="cover-mask"></div>
+				</div>
+				<div class="item-detail">
+					<div class="detail-title cut">贴身甜宠</div>
+					<div class="detail-info box cut">
+						<div class="inline-box">
+							<span class="tag">女频</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">现代言情</span></div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">总裁豪门</span>
+						</div>
+					</div>
+					<div class="detail-intro cut">相恋四年的学长出国前邀请开房，却拿错了房卡，上错了洛尧擢的床。</div>
+				</div>
+				<div class="item-mark"></div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">豪门第一妖夫</div>
+				<div class="item-desc box-item">重生归来，她绽放出了她本该拥有的光芒，更是将她迷人的魅力毫无保留。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">腹黑邪少，骗子老婆往哪逃</div>
+				<div class="item-desc box-item">传言墨家少爷长得倾国殃民，如沐春风好吧!那关她屁事！</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">逃爱暖妻</div>
+				<div class="item-desc box-item">她为了给父亲治病，甘愿出卖自己，却不小心进了他的房间</div>
+			</a>
+		</div>
+		<div >
+			<a class="item" href="javascript:void(0)">
+				<div class="item-cover">
+					<div class="img" style="background-image: url(&quot;https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/7dd98d1001e9390132a9dbb17dec54e737d19691.jpg&quot;);">
+					</div>
+					<div class="cover-mask"></div>
+				</div>
+				<div class="item-detail">
+					<div class="detail-title cut">琉璃年华</div>
+					<div class="detail-info box cut">
+						<div class="inline-box">
+							<span class="tag">女频</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">现代言情</span></div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">总裁豪门</span>
+						</div>
+					</div>
+					<div class="detail-intro cut">相恋四年的学长出国前邀请开房，却拿错了房卡，上错了洛尧擢的床。</div>
+				</div>
+				<div class="item-mark"></div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">豪门第一妖夫</div>
+				<div class="item-desc box-item">重生归来，她绽放出了她本该拥有的光芒，更是将她迷人的魅力毫无保留。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">腹黑邪少，骗子老婆往哪逃</div>
+				<div class="item-desc box-item">传言墨家少爷长得倾国殃民，如沐春风好吧!那关她屁事！</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">逃爱暖妻</div>
+				<div class="item-desc box-item">她为了给父亲治病，甘愿出卖自己，却不小心进了他的房间</div>
+			</a>
+		</div>
+		<div >
+			<a class="item" href="javascript:void(0)">
+				<div class="item-cover">
+					<div class="img" style="background-image: url(&quot;https://ss0.baidu.com/-Po3dSag_xI4khGko9WTAnF6hhy/boxapp_novel/pic/item/7dd98d1001e9390132a9dbb17dec54e737d19691.jpg&quot;);">
+					</div>
+					<div class="cover-mask"></div>
+				</div>
+				<div class="item-detail">
+					<div class="detail-title cut">王妃戏龙颜</div>
+					<div class="detail-info box cut">
+						<div class="inline-box">
+							<span class="tag">女频</span>
+						</div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">现代言情</span></div>
+						<div class="inline-box">
+							<span class="split">|</span>
+							<span class="tag">总裁豪门</span>
+						</div>
+					</div>
+					<div class="detail-intro cut">相恋四年的学长出国前邀请开房，却拿错了房卡，上错了洛尧擢的床。</div>
+				</div>
+				<div class="item-mark"></div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">豪门第一妖夫</div>
+				<div class="item-desc box-item">重生归来，她绽放出了她本该拥有的光芒，更是将她迷人的魅力毫无保留。</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">腹黑邪少，骗子老婆往哪逃</div>
+				<div class="item-desc box-item">传言墨家少爷长得倾国殃民，如沐春风好吧!那关她屁事！</div>
+			</a>
+			<a class="novel-item box" href="javascript:void(0)">
+				<div class="item-title box-item">逃爱暖妻</div>
+				<div class="item-desc box-item">她为了给父亲治病，甘愿出卖自己，却不小心进了他的房间</div>
+			</a>
+		</div>
+		
 		<a class="module-footer" href="/choicechannel?page_id=19&amp;query=%E5%A5%B3%E9%A2%91">进入女生爱看</a>
 	</div>
 	<div class="footer">
@@ -646,6 +885,29 @@
 		</div>
 		<div class="footer-line"></div>
 	</div>
+	<script>
+		;(function () {
+			var nav = document.getElementById('nav') //获取nav
+	
+			var navLi = nav.getElementsByTagName('li') //获取nav下面所有的li标签
+			
+			var pageList = document.getElementsByClassName('page-box') //获取所有的box元素
+
+			for (var i = 0;i < navLi.length; i++) { //循环所有的li标签
+				navLi[i].index = i
+				navLi[i].onclick = function () { //给所有的li标签绑定click事件
+
+					for(var i = 0;i < pageList.length;i++) { //获取所有的box元素
+						navLi[i].className = 'box-item '
+						pageList[i].style.display = 'none' //先隐藏所有的box
+					}
+					this.className = 'box-item current'
+					pageList[this.index].style.display = 'block' //显示当前对应的box
+				}
+			}
+
+		})()
+</script>
 </body>
 
 </html>
