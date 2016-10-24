@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>qq</title>
+	<style>
+		/*
+    去掉浏览器的默认样式
+*/
+		
+		* {
+			/* 去掉内边距 */
+			padding: 0;
+			/* 去掉外边距 */
+			margin: 0;
+			/* 去掉列表样式 */
+			list-style: none;
+			/* 去掉下划线 */
+			text-decoration: none;
+		}
+		
+		.nav li {
+			/*这个是绝对定位*/
+			position: relative;
+			/*是设置对象下方外边距属性的样式*/
+			margin-bottom: 5px;
+			/*阴影*/
+			box-shadow: 1px 1px 6px #b5b5b5;
+		}
+		
+		.nav .picture {
+			/*从这个标签的左上角开始计算*/
+			position: absolute;
+			/*左*/
+			left: 20px;
+			/*left(左）的对应词是right(右）*/
+			top: -15px;
+		}
+		
+		.nav .picture img {
+			/**/
+			width: 60px;
+			/**/
+			height: 60px;
+			/*圆角特郊*/
+			border-radius: 50%;
+			/*超出宽度或高度的部分,就隐藏起来*/
+			overflow: hidden;
+		}
+		
+		.nav .user {
+			/*这个是绝对定位;*/
+			position: relative;
+			/**/
+			height: 85px;
+			/*两个元素见的距离*/
+			padding-left: 100px;
+			/**/
+			top: 25px;
+		}
+		
+		.nav .time {
+			/*表示绝对位置，相对页面来说是固定死的。*/
+			position: absolute;
+			/**/
+			top: 0px;
+			/*意思就是给这个图层添加一个浮动，而且这个图层将浮在右边，这样是能去掉有图层在有的浏览器显示的右面有空白的问题，*/
+			right: 2px;
+			/*float:left 意思同上，只是把右都换成左*/
+		}
+		
+		.list {
+			/**/
+			display: -webkit-box;
+			/**/
+			-webkit-box-orient: horizontal;
+			/**/
+			-webkit-box-pack: justify;
+		}
+		
+		.list li {
+			/* 设置文本居中*/
+			text-align: center;
+			/*字体大小*/
+			margin-left: 35px;
+			margin-right: 35px;
+		}
+		
+		.frame {
+			/*边框样式*/
+			border-bottom-style: inset;
+			/*边框的宽度*/
+			border-bottom-width: 25px;
+			/*边框的颜色*/
+			border-bottom-color: #dddddd;
+			/*上外边距*/
+			margin-top: 20px;
+			/*下外边距*/
+			margin-bottom: 20px;
+		}
+		
+		.fram {
+			/*边框样式*/
+			border-bottom-style: inset;
+			/*边框的宽度*/
+			border-bottom-width: 30px;
+			/*边框的颜色*/
+			border-bottom-color: #dddddd;
+			height: 35px;
+		}
+		
+		.fra {
+			/*边框样式*/
+			border-bottom-style: inset;
+			/*边框的宽度*/
+			border-bottom-width: 30px;
+			/*边框的颜色*/
+			border-bottom-color: #dddddd;
+			height: 35px;
+		}
+		
+		.app li {
+			/*这个是绝对定位;*/
+			position: relative;
+			/*设置对象下方外边距属性*/
+			margin-bottom: 25px;
+		}
+		
+		.app .user {
+			/*这个是绝对定位;*/
+			position: relative;
+			/**/
+			height: 40px;
+			/*属性是设置元素左内边距的宽度。行内非替换元素上设置的左内边距仅在元素所生成的第一个行内框的左边出现。*/
+			padding-left: 65px;
+		}
+		
+		.app .user .pic {
+			/**/
+			position: absolute;
+			/**/
+			left: 20px;
+			/**/
+			top: -7px;
+		}
+		
+		.app .user .print {
+			/*/*表示绝对位置，相对页面来说是固定死的。*/
+			*/ position: absolute;
+			/*left(左）的对应词是right(右）*/
+			left: 20px;
+			/**/
+			top: 2px;
+		}
+		
+		.app .user .pho {
+			/*表示绝对位置，相对页面来说是固定死的*/
+			position: absolute;
+			/**/
+			top: -5px;
+			/**/
+			right: 15px;
+		}
+		
+		.footer {
+			/*表示绝对位置，相对页面来说是固定死的*/
+			position: absolute;
+			/**/
+			left: 0px;
+			/**/
+			right: 0px;
+			/**/
+			bottom: 0px;
+			/**/
+			border-top-style: ridge
+		}
+		
+		.footer .bas {
+			/*就是说，这个overflow:hidden;属性可以保证div的高度或宽度不变。
+div里添加的东西再多，高度或宽度也不变。超出的部分隐藏。*/
+			overflow: hidden;
+			/**/
+			text-align: center;
+		}
+		
+		.footer .base {
+			/*左浮动*/
+			float: left;
+			/**/
+			width: 33%;
+		}
+		
+		.footer .hover {
+			/*字体颜色*/
+			color: #1874CD;
+			/*左浮动*/
+			float: left;
+			/**/
+			width: 33%;
+		}
+		
+		.page-box {
+			/*隐藏所有page-box*/
+			display: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="page-box" style="display:block">
+		<ul class="nav">
+			<li>
+				<div class="user">
+					<div class="picture">
+						<img src="images/1.jpg">
+					</div>
+					<div class="titi">
+						<div>标题</div>
+						<div>信息</div>
+					</div>
+					<div class="time">20:10</div>
+				</div>
+			</li>
+			<li>
+				<div class="user">
+					<div class="picture">
+						<img src="images/1.jpg">
+					</div>
+					<div class="titi">
+						<div>标题</div>
+						<div>信息</div>
+					</div>
+					<div class="time">20:10</div>
+				</div>
+			</li>
+			<li>
+				<div class="user">
+					<div class="picture">
+						<img src="images/1.jpg">
+					</div>
+					<div class="titi">
+						<div>标题</div>
+						<div>信息</div>
+					</div>
+					<div class="time">20:10</div>
+				</div>
+			</li>
+			<li>
+				<div class="user">
+					<div class="picture">
+						<img src="images/1.jpg">
+					</div>
+					<div class="titi">
+						<div>标题</div>
+						<div>信息</div>
+					</div>
+					<div class="time">20:10</div>
+				</div>
+			</li>
+			<li>
+				<div class="user">
+					<div class="picture">
+						<img src="images/1.jpg">
+					</div>
+					<div class="titi">
+						<div>标题</div>
+						<div>信息</div>
+					</div>
+					<div class="time">20:10</div>
+				</div>
+			</li>
+		</ul>
+
+	</div>
+	<div class="page-box">
+		<ul class="list">
+			<li>
+				<div> <img src="images/23.jpg" width="50"> </div>
+				新朋友
+			</li>
+			<li>
+				<div><img src="images/24.jpg" width="50"> </div>
+				群聊
+			</li>
+			<li>
+				<div><img src="images/24.jpg" width="50"></div>
+				公众号
+			</li>
+		</ul>
+		<div class="frame"></div>
+		<ul class="app">
+			<li>
+				<div class="user">
+					<div class=" print"><img src="images/26.jpg" width="15"></div>
+					<div class="titm">特别关心</div>
+					<div class="pho">20:10 </div>
+				</div>
+			</li>
+			<li class="fram">
+				<div class="user">
+					<div class=" print"><img src="images/26.jpg" width="15"></div>
+					<div class="titm">常用群聊</div>
+					<div class="pho">20:10</div>
+				</div>
+			</li>
+			<li class="fram">
+				<div class="user">
+					<div class=" print"><img src="images/26.jpg" width="15"></div>
+					<div class="titm">曾经的我们</div>
+					<div class="pho">20:10</div>
+				</div>
+			</li>
+
+			<li>
+				<div class="user">
+					<div class=" print"><img src="images/26.jpg" width="15"></div>
+					<div class="titm">手机通讯器</div>
+					<div class="pho">20:10</div>
+				</div>
+			</li>
+			<li>
+				<div class="user">
+					<div class="print"><img src="images/26.jpg" width="15"></div>
+					<div class="titm">我的设备</div>
+					<div class="pho">20:10</div>
+				</div>
+			</li>
+		</ul>
+	</div>
+
+	<div class="page-box">
+		<ul class="list">
+			<li>
+				<div> <img src="images/13.jpg" width="50"> </div>
+				好友动态
+			</li>
+			<li>
+				<div><img src="images/14.jpg" width="50"> </div>附近
+			</li>
+			<li>
+				<div><img src="images/15.jpg" width="50"></div>
+				兴趣部落
+			</li>
+		</ul>
+		<div class="frame"></div>
+		<ul class="app">
+			<li>
+				<div class="user">
+					<div class="pic"><img src="images/16.jpg" width="30"></div>
+					<div class="titm">游戏</div>
+					<div class="pho"><img src="images/17.jpg" width="30"></div>
+				</div>
+			</li>
+			<li>
+				<div class="user">
+					<div class="pic"><img src="images/16.jpg" width="30"></div>
+					<div class="titm">日迹</div>
+					<div class="pho"><img src="images/17.jpg" width="30"></div>
+				</div>
+			</li>
+			<li>
+				<div class="user">
+					<div class="pic"><img src="images/16.jpg" width="30"></div>
+					<div class="titm">阅读</div>
+					<div class="pho"><img src="images/17.jpg" width="30"></div>
+				</div>
+			</li>
+			<li class="fram">
+				<div class="user">
+					<div class="pic"><img src="images/16.jpg" width="30"></div>
+					<div class="titm">音乐</div>
+					<div class="pho"><img src="images/17.jpg" width="30"></div>
+				</div>
+			</li>
+
+			<li>
+				<div class="user">
+					<div class="pic"><img src="images/16.jpg" width="30"></div>
+					<div class="titm">附近的群</div>
+					<div class="pho"><img src="images/17.jpg" width="30"></div>
+				</div>
+			</li>
+		</ul>
+	</div>
+	<footer class="footer">
+		<ul id="nav" class="bas">
+			<li class="hover">
+				<div><img src="images/20.jpg" width="35"></div>
+				消息
+			</li>
+			<li class="base">
+				<div><img src="images/21.jpg" width="35"></div>
+				联系人
+			</li>
+			<li class="base">
+				<div><img src="images/22.jpg" width="35"></div>
+				动态
+			</li>
+		</ul>
+	</footer>
+	<script>
+		;(function () {
+			var nav = document.getElementById('nav') //获取nav
+			var navLi = nav.getElementsByTagName('li') //获取nav下面所有的li标签
+			var pageList = document.getElementsByClassName('page-box') //获取所有的box元素
+
+			for (var i = 0;i < navLi.length; i++) { //循环所有的li标签
+				navLi[i].index = i
+				navLi[i].onclick = function () { //给所有的li标签绑定click事件
+
+					for(var i = 0;i < pageList.length;i++) { //获取所有的box元素
+						navLi[i].className = 'base'
+						pageList[i].style.display = 'none' //先隐藏所有的box
+					}
+					this.className = 'hover'
+					pageList[this.index].style.display = 'block' //显示当前对应的box
+				}
+			}
+
+		})()
+	</script>
+</body>
+
+</html>
