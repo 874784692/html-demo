@@ -1,0 +1,259 @@
+!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>游戏中心</title>
+	<style>
+		* {
+			/* 去掉内边距 */
+			padding: 0;
+			/* 去掉外边距 */
+			margin: 0;
+			/* 去掉列表样式 */
+			list-style: none;
+			/* 去掉下划线 */
+			text-decoration: none;
+		}
+		
+		.nav {
+			background: #CD661D;
+			height: 75px;
+		}
+		
+		.nav ul {
+			display: block;
+			margin: auto;
+			width: 50%;
+		}
+		
+		.nav .hover {
+			float: left;
+			height: 25px;
+			width: 90px;
+			line-height: 100px;
+			text-align: center;
+			margin-right: 5px;
+			color: #D3D3D3
+		}
+		
+		.nav li {
+			float: left;
+			height: 25px;
+			width: 125px;
+			line-height: 100px;
+			text-align: center;
+			margin-right: 5px;
+			color: #ABABAB;
+		}
+		
+		.search {
+			border: 1px solid;
+			border-color: #CD661D;
+			margin: 10px 10px 10px 10px;
+		}
+		
+		.searc {
+			position: relative;
+			height: 40px;
+			padding-left: 40px;
+			top: 10px;
+		}
+		
+		.search .pic {
+			position: absolute;
+			left: 10px;
+			top: 0px;
+		}
+		
+		.search .titm {
+			color: #ABABAB;
+		}
+		
+		.list {
+			width: 100%;
+			
+			position: relative;
+			margin: 0px 10px 10px 10px;
+		}
+		
+		.list .pic {
+			display: block;
+			width: 50%;
+		}
+		
+		.list .picture {
+			position: absolute;
+			top: 0px;
+			right: 0px;
+			display: block;
+			width: 50%;
+		}
+		
+		.list img {
+			width: 98%;
+		}
+		
+		.app {
+			margin-bottom: 100px;
+		}
+		
+		.app .user li {
+			/*往左浮动*/
+			float: left;
+			/*设置平均宽度*/
+			width: 20%;
+			/* 设置文本居中*/
+			text-align: center;
+		}
+		
+		.app .user li a {
+			/*将置以我为定位布局*/
+			position: relative;
+			/*将a标签设置成块元素*/
+			display: block;
+			/*设置内边距*/
+			padding: 5px 10px;
+			/*设置外边距*/
+			margin: 5px 10px;
+			/*设置a标签链接颜色*/
+			color: #ABABAB;
+		}
+		
+		.app .user li div img {
+			width: 40px;
+		}
+		
+		.frame {
+			/*边框样式*/
+			border-bottom-style: inset;
+			/*边框的宽度*/
+			border-bottom-width: 25px;
+			/*边框的颜色*/
+			border-bottom-color: #dddddd;
+		}
+		
+		.jian ul {
+			position: relative;
+			margin-top: 20px;
+			margin: 5px 10px 10px 25px;
+		}
+		
+		.jian .pic {
+			position: absolute;
+			left: 0px;
+			top: 10px;
+		}
+		
+		.jian .pic img {
+			border: 5px solid;
+			border-width: 1px;
+			border-color: #CD661D;
+			border-radius: 10px;
+			width: 40px;
+		}
+		
+		.jian .titm {
+			padding: 10px 10px 10px 60px;
+		}
+		.jian .con{
+            color:#ABABAB;
+        }
+		.jian .install {
+			position: absolute;
+			top: 30px;
+			right: 10px;
+            border: 5px solid;
+			border-width: 1px;
+            border-radius: 5px;
+            border-color:#00CD00;
+            color:#00CD00;
+            padding:5px 5px 5px 5px;
+		}
+	</style>
+</head>
+
+
+
+<body>
+	<div class="nav">
+		<ul>
+			<li class="hover">精品</li>
+			<li>榜单</li>
+			<li>分类</li>
+			<li>我的</li>
+		</ul>
+	</div>
+	<div class="search">
+		<div class="searc">
+			<div class="pic">
+				<img src="images/27.jpg" width="20">
+			</div>
+			<div class="titm">跳起来打破无限的冰块</div>
+		</div>
+	</div>
+	<div class="list">
+		<div class="pic">
+			<img src="images/28.jpg">
+		</div>
+		<div class="picture">
+			<img src="images/28.jpg">
+		</div>
+	</div>
+	<ul class="app">
+		<div class="user">
+			<li>
+				<a href="#">
+					<div><img src="images/1.jpg"></div>
+					必备
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div><img src="images/1.jpg"></div>
+					必备
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div><img src="images/1.jpg"></div>
+					必备
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div><img src="images/1.jpg"></div>
+					必备
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<div><img src="images/1.jpg"></div>
+					必备
+				</a>
+			</li>
+		</div>
+	</ul>
+	<div class="frame "></div>
+	<div class="jian">
+		<ul>
+			<li>
+				<div class="pic">
+					<img src="images/1.jpg">
+				</div>
+				<div class="titm">
+					<div>美团</div>
+					<div class="con">时尚购物</div>
+					<div class="con">吃货</div>
+				</div>
+				<div class="install">
+					安装
+				</div>
+			</li>
+		</ul>
+
+	</div>
+
+</body>
+
+</html>
