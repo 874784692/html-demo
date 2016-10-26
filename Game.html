@@ -72,7 +72,6 @@
 		
 		.list {
 			width: 100%;
-			
 			position: relative;
 			margin: 0px 10px 10px 10px;
 		}
@@ -137,12 +136,16 @@
 			position: relative;
 			margin-top: 20px;
 			margin: 5px 10px 10px 25px;
+			border-bottom-style: ridge;
+			border-bottom-color: #ABABAB;
+			border-bottom-width: 1px;
+            height:100px;
 		}
 		
 		.jian .pic {
 			position: absolute;
 			left: 0px;
-			top: 10px;
+			top: 15px;
 		}
 		
 		.jian .pic img {
@@ -151,24 +154,32 @@
 			border-color: #CD661D;
 			border-radius: 10px;
 			width: 40px;
+			padding: 7px 7px 7px 7px;
 		}
 		
 		.jian .titm {
-			padding: 10px 10px 10px 60px;
+			padding: 5px 10px 10px 60px;
 		}
-		.jian .con{
-            color:#ABABAB;
-        }
+		
+		.jian .tit {
+			margin: 5px;
+		}
+		
+		.jian .con {
+			color: #ABABAB;
+			margin: 5px;
+		}
+		
 		.jian .install {
 			position: absolute;
 			top: 30px;
 			right: 10px;
-            border: 5px solid;
+			border: 5px solid;
 			border-width: 1px;
-            border-radius: 5px;
-            border-color:#00CD00;
-            color:#00CD00;
-            padding:5px 5px 5px 5px;
+			border-radius: 5px;
+			border-color: #00CD00;
+			color: #00CD00;
+			padding: 7px 7px 7px 7px;
 		}
 	</style>
 </head>
@@ -242,7 +253,7 @@
 					<img src="images/1.jpg">
 				</div>
 				<div class="titm">
-					<div>美团</div>
+					<div class="tit">美团</div>
 					<div class="con">时尚购物</div>
 					<div class="con">吃货</div>
 				</div>
@@ -251,7 +262,22 @@
 				</div>
 			</li>
 		</ul>
+		<ul>
+			<li>
+				<div class="pic">
+					<img src="images/1.jpg">
+				</div>
+				<div class="titm">
+					<div class="tit">美团</div>
+					<div class="con">时尚购物</div>
+					<div class="con">吃货</div>
+				</div>
+				<div class="install">
+					安装
+				</div>
+			</li>
 
+		</ul>
 	</div>
 
 </body>
