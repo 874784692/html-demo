@@ -87,6 +87,7 @@
 			right: 0px;
 			display: block;
 			width: 50%;
+			float: left;
 		}
 		
 		.list img {
@@ -129,7 +130,8 @@
 			/*边框的宽度*/
 			border-bottom-width: 25px;
 			/*边框的颜色*/
-			border-bottom-color: #dddddd;
+			border-bottom-color: #C0FF3E;
+			;
 		}
 		
 		.jian ul {
@@ -257,17 +259,114 @@
 			padding: 7px 7px 7px 7px;
 		}
 		
+		.menu {
+			border-top-style: inset;
+			border-top-width: 25px;
+			border-top-color: #C0FF3E;
+			padding-top: 10px;
+			border-bottom-style: inset;
+			border-bottom-width: 25px;
+			border-bottom-color: #dddddd;
+			height: 365px;
+		}
+		
 		.menu ul li {
 			float: left;
 			width: 25%;
 		}
 		
-		.menu ul li .pic {
-			border: 5px solid;
+		.menu ul li a {
+			position: relative;
+			display: block;
+			background: #00CD00;
+			text-align: center;
+			margin: 5px 5px 5px 5px;
+			height: 160px;
 		}
 		
-		.menu ul li img {
-			width: 40px;
+		.menu ul li a .titm {
+			margin: 15px;
+			color: #E0EEEE;
+			font-size: 25px
+		}
+		
+		.menu ul li a .pic {
+			padding: 40px 7px 7px 7px;
+		}
+		
+		.menu ul li a .pic img {
+			width: 60px;
+		}
+		
+		.game {
+			position: relative;
+		}
+		
+		.game .titm {
+			padding: 40px 7px 7px 15px;
+		}
+		
+		.game .play {
+			position: absolute;
+			top: 40px;
+			right: 10px;
+			text-align: center;
+			font-size: 10px;
+			color: #ABABAB;
+		}
+		
+		.game .play img {
+			width: 15px
+		}
+		
+		.pastime {
+			position: relative;
+			border-top-style: ridge;
+			padding-bottom: 5px
+		}
+		
+		.pastime .pic {
+			position: absolute;
+			left: 70px;
+			top: 30px;
+			text-align: center;
+		}
+		
+		.pastime .pic .titm {
+			margin: 15px;
+			color: #00CD00;
+		}
+		
+		.pastime .pic img {
+			width: 40px
+		}
+		
+		.pastime .right {
+			border-right-style: ridge;
+			width: 270px;
+			height: 110px;
+			margin-top: 10px;
+		}
+		
+		.pastime .righ {
+			border-bottom-style: ridge;
+			height: 10px;
+			border-bottom-width: 25px;
+			border-bottom-color: #C0FF3E;
+		}
+		
+		.pastime .title {
+			margin-left: 350px;
+			text-align: center;
+		}
+		
+		.pastime .title .titl a {
+			float: left;
+			width: 26%;
+			letter-spacing: 10px;
+			padding: 30px 7px 7px 15px;
+			color: #121a2a;
+			letter-spacing: 1px;
 		}
 	</style>
 </head>
@@ -289,89 +388,96 @@
 			<div class="titm">跳起来打破无限的冰块</div>
 		</div>
 	</div>
-	<div class="list">
-		<div class="pic">
-			<img src="images/28.jpg">
+	<div>
+		<div class="list">
+			<ul>
+				<li>
+					<a href="#">
+						<div class="pic">
+							<img src="images/28.jpg">
+						</div>
+						<div class="picture">
+							<img src="images/28.jpg">
+						</div>
+					</a>
+				</li>
+			</ul>
 		</div>
-		<div class="picture">
-			<img src="images/28.jpg">
-		</div>
-	</div>
-	<ul class="app">
-		<div class="user">
-			<li>
-				<a href="#">
-					<div><img src="images/1.jpg"></div>
-					必备
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<div><img src="images/1.jpg"></div>
-					必备
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<div><img src="images/1.jpg"></div>
-					必备
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<div><img src="images/1.jpg"></div>
-					必备
-				</a>
-			</li>
-			<li>
-				<a href="#">
-					<div><img src="images/1.jpg"></div>
-					必备
-				</a>
-			</li>
-		</div>
-	</ul>
-	<div class="frame "></div>
-	<div class="jian">
-		<ul>
-			<li>
-				<div class="pic">
-					<img src="images/1.jpg">
-				</div>
-				<div class="titm">
-					<div class="tit">美团</div>
-					<div class="con">
-						<img src="images/1.jpg">
-						<img src="images/1.jpg">
-						<img src="images/1.jpg"> 时尚购物
-					</div>
-					<div class="con">吃货</div>
-				</div>
-				<div class="install">
-					安装
-				</div>
-			</li>
+		<ul class="app">
+			<div class="user">
+				<li>
+					<a href="#">
+						<div><img src="images/1.jpg"></div>
+						必备
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div><img src="images/1.jpg"></div>
+						必备
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div><img src="images/1.jpg"></div>
+						必备
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div><img src="images/1.jpg"></div>
+						必备
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div><img src="images/1.jpg"></div>
+						必备
+					</a>
+				</li>
+			</div>
 		</ul>
-		<ul>
-			<li>
-				<div class="pic">
-					<img src="images/1.jpg">
-				</div>
-				<div class="titm">
-					<div class="tit">美团</div>
-					<div class="con">
+		<div class="frame "></div>
+		<div class="jian">
+			<ul>
+				<li>
+					<div class="pic">
 						<img src="images/1.jpg">
-						<img src="images/1.jpg">
-						<img src="images/1.jpg"> 时尚购物
 					</div>
-					<div class="con">吃货</div>
-				</div>
-				<div class="install">
-					安装
-				</div>
-			</li>
-
-		</ul>
+					<div class="titm">
+						<div class="tit">美团</div>
+						<div class="con">
+							<img src="images/1.jpg">
+							<img src="images/1.jpg">
+							<img src="images/1.jpg"> 时尚购物
+						</div>
+						<div class="con">吃货</div>
+					</div>
+					<div class="install">
+						安装
+					</div>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<div class="pic">
+						<img src="images/1.jpg">
+					</div>
+					<div class="titm">
+						<div class="tit">美团</div>
+						<div class="con">
+							<img src="images/1.jpg">
+							<img src="images/1.jpg">
+							<img src="images/1.jpg"> 时尚购物
+						</div>
+						<div class="con">吃货</div>
+					</div>
+					<div class="install">
+						安装
+					</div>
+				</li>
+			</ul>
+		</div>
 	</div>
 	<div class="apply">
 		<ul>
@@ -410,59 +516,118 @@
 			</li>
 		</ul>
 	</div>
-	<div class="menu">
-		<ul>
-			<li>
-				<div class="pic">
-					<div>
-						<img src="images/1.jpg"> 掌上阅读
-					</div>
+	<div>
+		<div class="menu">
+			<ul>
+				<li>
+					<a href="#">
+						<div class="pic"><img src="images/1.jpg" width="90">
+							<div class="titm">掌上阅读</div>
+						</div>
+					</a>
+				</li>
 
-				</div>
-			</li>
-			<li>
+				<li>
+					<a href="#">
+						<div class="pic"><img src="images/1.jpg">
+							<div class="titm">掌上阅读</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="pic"><img src="images/1.jpg">
+							<div class="titm">掌上阅读</div>
+						</div>
+					</a>
+				</li>
+
+				<li>
+					<a href="#">
+						<div class="pic"><img src="images/1.jpg">
+							<div class="titm">掌上阅读</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="pic"><img src="images/1.jpg">
+							<div class="titm">掌上阅读</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="pic"><img src="images/1.jpg">
+							<div class="titm">掌上阅读</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="pic"><img src="images/1.jpg">
+							<div class="titm">掌上阅读</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div class="pic"><img src="images/1.jpg">
+							<div class="titm">掌上阅读</div>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+		<div class="game">
+			<div class="titm">
+				游戏分类
+			</div>
+			<div class="play">
+				<img src="images/1.jpg"> 精品游戏
+				<img src="images/1.jpg">
+			</div>
+		</div>
+		<div class="pastime">
+			<div class="pic">
 				<div>
 					<img src="images/1.jpg">
 				</div>
-				时尚购物
-			</li>
-			<li>
+				<div class="titm">动作冒险</div>
+			</div>
+			<div class="title">
+				<div class="titl">
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
+				</div>
+			</div>
+			<div class="right"></div>
+		</div>
+		<div class="pastime">
+			<div class="pic">
 				<div>
 					<img src="images/1.jpg">
 				</div>
-				摄影摄像
-			</li>
-			<li>
-				<div>
-					<img src="images/1.jpg">
+				<div class="titm">动作冒险</div>
+			</div>
+			<div class="title">
+				<div class="titl">
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
+					<a href="#">飞行空站</a>
 				</div>
-				影音直播
-			</li>
-			<li>
-				<div>
-					<img src="images/1.jpg">
-				</div>
-				女生频道
-			</li>
-			<li>
-				<div>
-					<img src="images/1.jpg">
-				</div>
-				男生频道
-			</li>
-			<li>
-				<div>
-					<img src="images/1.jpg">
-				</div>
-				首发专区
-			</li>
-			<li>
-				<div>
-					<img src="images/1.jpg">
-				</div>
-				VR专区
-			</li>
-		</ul>
+			</div>
+			<div class="right"></div>
+			<div class="righ"></div>
+		</div>
 	</div>
 </body>
 
