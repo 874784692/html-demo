@@ -1,8 +1,10 @@
-!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
 	<meta charset="UTF-8">
+	<!-- 约束视口，禁止手机端缩放页面 -->
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0">
 	<title>游戏中心</title>
 	<style>
 		* {
@@ -30,7 +32,7 @@
 		.nav .hover {
 			float: left;
 			height: 25px;
-			width: 90px;
+			width: 45px;
 			line-height: 100px;
 			text-align: center;
 			margin-right: 5px;
@@ -40,7 +42,7 @@
 		.nav .base {
 			float: left;
 			height: 25px;
-			width: 125px;
+			width: 45px;
 			line-height: 100px;
 			text-align: center;
 			margin-right: 5px;
@@ -55,7 +57,7 @@
 		
 		.searc {
 			position: relative;
-			height: 40px;
+			height: 32px;
 			padding-left: 40px;
 			top: 10px;
 		}
@@ -63,11 +65,12 @@
 		.search .pic {
 			position: absolute;
 			left: 10px;
-			top: 0px;
+			top: -2px;
 		}
 		
 		.search .titm {
 			color: #ABABAB;
+			font-size: 1px;
 		}
 		
 		.list {
@@ -128,7 +131,7 @@
 			/*边框样式*/
 			border-bottom-style: inset;
 			/*边框的宽度*/
-			border-bottom-width: 25px;
+			border-bottom-width: 10px;
 			/*边框的颜色*/
 			border-bottom-color: #C0FF3E;
 			;
@@ -147,7 +150,7 @@
 		.jian .pic {
 			position: absolute;
 			left: 0px;
-			top: 15px;
+			top: 20px;
 		}
 		
 		.jian .pic img {
@@ -160,7 +163,7 @@
 		}
 		
 		.jian .titm {
-			padding: 5px 10px 10px 60px;
+			padding: 15px 10px 10px 70px;
 		}
 		
 		.jian .tit {
@@ -169,11 +172,13 @@
 		
 		.jian .con img {
 			width: 10px;
+			font-size: 1px;
 		}
 		
 		.jian .con {
 			color: #ABABAB;
 			margin: 5px;
+			font-size: 1px;
 		}
 		
 		.jian .install {
@@ -185,7 +190,8 @@
 			border-radius: 5px;
 			border-color: #00CD00;
 			color: #00CD00;
-			padding: 7px 7px 7px 7px;
+			padding: 7px 12px 7px 12px;
+			font-size: 1px;
 		}
 		
 		.apply ul {
@@ -205,7 +211,7 @@
 		.apply .pic {
 			position: absolute;
 			left: 40px;
-			top: 25px;
+			top: 20px;
 		}
 		
 		.apply .pic img {
@@ -220,7 +226,7 @@
 		.apply .titm {
 			position: absolute;
 			left: 110px;
-			top: 20px;
+			top: 10px;
 		}
 		
 		.apply .tit {
@@ -234,6 +240,7 @@
 		.apply .con {
 			color: #ABABAB;
 			margin: 5px;
+			font-size: 1px;
 		}
 		
 		.apply .install {
@@ -245,7 +252,8 @@
 			border-radius: 5px;
 			border-color: #00CD00;
 			color: #00CD00;
-			padding: 7px 7px 7px 7px;
+			padding: 7px 12px 7px 12px;
+			font-size: 1px;
 		}
 		
 		.apply .instal {
@@ -256,18 +264,19 @@
 			border-width: 1px;
 			border-radius: 5px;
 			border-color: #ABABAB;
-			padding: 7px 7px 7px 7px;
+			padding: 7px 12px 7px 12px;
+			font-size: 1px;
 		}
 		
 		.menu {
 			border-top-style: inset;
-			border-top-width: 25px;
+			border-top-width: 10px;
 			border-top-color: #C0FF3E;
 			padding-top: 10px;
 			border-bottom-style: inset;
-			border-bottom-width: 25px;
-			border-bottom-color: #dddddd;
-			height: 365px;
+			border-bottom-width: 10px;
+			border-bottom-color: #C0FF3E;
+			height: 160px;
 		}
 		
 		.menu ul li {
@@ -281,35 +290,32 @@
 			background: #00CD00;
 			text-align: center;
 			margin: 5px 5px 5px 5px;
-			height: 160px;
-<<<<<<< HEAD
+			height: 65px;
+			width: 95px
 		}
 		
 		.menu ul li a .titm {
-			margin: 15px;
+			margin: 2px;
 			color: #E0EEEE;
-			font-size: 25px
-		}
-		
-		.menu ul li a .pic {
-			padding: 40px 7px 7px 7px;
+			font-size: 1px
 		}
 		
 		.menu ul li a .pic img {
-			width: 60px;
+			padding-top: 5px;
+			width: 35px;
 		}
-		
-		.game {
-			position: relative;
-		}
-		
+		.game{
+              position: relative;
+        }
 		.game .titm {
-			padding: 40px 7px 7px 15px;
+			padding: 12px 7px 7px 15px;
+			font-size: 1px;
 		}
 		
 		.game .play {
+          
 			position: absolute;
-			top: 40px;
+			top: 12px;
 			right: 10px;
 			text-align: center;
 			font-size: 10px;
@@ -317,72 +323,73 @@
 		}
 		
 		.game .play img {
-			width: 15px
+			width: 10px
 		}
 		
 		.pastime {
 			position: relative;
 			border-top-style: ridge;
-			padding-bottom: 5px
+			height: 100px;
+		}
+		
+		.right {
+			border-right-style: ridge;
+			width: 100px;
+			height: 80px;
+			margin-top: -18px;
+		}
+		
+		.righ {
+			border-bottom-style: ridge;
+			height: 0px;
+			border-bottom-width: 10px;
+			border-bottom-color: #C0FF3E;
+			margin-bottom: 5px;
 		}
 		
 		.pastime .pic {
 			position: absolute;
-			left: 70px;
-			top: 30px;
+			left: 30px;
+			top: 20px;
 			text-align: center;
 		}
 		
 		.pastime .pic .titm {
-			margin: 15px;
+			margin: 3px;
 			color: #00CD00;
+			font-size: 1px;
 		}
 		
 		.pastime .pic img {
 			width: 40px
 		}
 		
-		.pastime .right {
-			border-right-style: ridge;
-			width: 270px;
-			height: 110px;
-			margin-top: 10px;
-		}
-		
-		.pastime .righ {
-			border-bottom-style: ridge;
-			height: 10px;
-			border-bottom-width: 25px;
-			border-bottom-color: #C0FF3E;
-		}
-		
-		.pastime .title {
-			margin-left: 350px;
-			text-align: center;
+		.pastime .title .titl {
+			padding: 20px 10px 10px 130px;
 		}
 		
 		.pastime .title .titl a {
 			float: left;
-			width: 26%;
-			padding: 30px 7px 7px 15px;
+			width: 27%;
 			color: #121a2a;
-			letter-spacing: 1px;
+			letter-spacing: 0px;
+			margin: 8px;
 		}
 		
 		.personal {
 			position: relative;
 			border-top-style: inset;
-			border-top-width: 25px;
+			border-top-width: 10px;
 			border-top-color: #C0FF3E;
 			border-bottom-style: ridge;
-			height: 150px;
-			border-bottom-width: 25px;
+			height: 125px;
+			border-bottom-width: 10px;
 			border-bottom-color: #C0FF3E;
 		}
 		
 		.personal .pic {
 			position: absolute;
-			left: 40px;
+			left: 15px;
 			top: 30px;
 		}
 		
@@ -390,14 +397,14 @@
 			border: 5px solid;
 			border-width: 2px;
 			border-color: #FF7F00;
-			border-radius: 45px;
-			width: 80px;
+			border-radius: 50px;
+			width: 60px;
 			padding: 7px 7px 7px 7px;
 			background: #00CD00;
 		}
 		
 		.personal .titm {
-			padding: 45px 7px 7px 170px;
+			padding: 40px 7px 7px 110px;
 		}
 		
 		.personal .titm .tit {
@@ -423,94 +430,7 @@
 		}
 		
 		.personal .picture img {
-			width: 40px;
-=======
-		}
-		
-		.menu ul li a .titm {
-			margin: 15px;
-			color: #E0EEEE;
-			font-size: 25px
-		}
-		
-		.menu ul li a .pic {
-			padding: 40px 7px 7px 7px;
-		}
-		
-		.menu ul li a .pic img {
-			width: 60px;
-		}
-		
-		.game {
-			position: relative;
-		}
-		
-		.game .titm {
-			padding: 40px 7px 7px 15px;
-		}
-		
-		.game .play {
-			position: absolute;
-			top: 40px;
-			right: 10px;
-			text-align: center;
-			font-size: 10px;
-			color: #ABABAB;
-		}
-		
-		.game .play img {
-			width: 15px
-		}
-		
-		.pastime {
-			position: relative;
-			border-top-style: ridge;
-			padding-bottom: 5px
-		}
-		
-		.pastime .pic {
-			position: absolute;
-			left: 70px;
-			top: 30px;
-			text-align: center;
-		}
-		
-		.pastime .pic .titm {
-			margin: 15px;
-			color: #00CD00;
-		}
-		
-		.pastime .pic img {
-			width: 40px
-		}
-		
-		.pastime .right {
-			border-right-style: ridge;
-			width: 270px;
-			height: 110px;
-			margin-top: 10px;
-		}
-		
-		.pastime .righ {
-			border-bottom-style: ridge;
-			height: 10px;
-			border-bottom-width: 25px;
-			border-bottom-color: #C0FF3E;
-		}
-		
-		.pastime .title {
-			margin-left: 350px;
-			text-align: center;
-		}
-		
-		.pastime .title .titl a {
-			float: left;
-			width: 26%;
-			letter-spacing: 10px;
-			padding: 30px 7px 7px 15px;
-			color: #121a2a;
-			letter-spacing: 1px;
->>>>>>> 32bc48cb73bad0f479713d056787564c984510e1
+			width: 30px;
 		}
 		
 		.appliance {
@@ -523,7 +443,7 @@
 		
 		.appliance .pic {
 			position: absolute;
-			left: 40px;
+			left: 10px;
 			top: 30px;
 		}
 		
@@ -538,7 +458,7 @@
 		}
 		
 		.appliance .titm {
-			padding: 40px 7px 7px 90px
+			padding: 40px 7px 7px 60px
 		}
 		
 		.appliance .pict {
@@ -555,7 +475,7 @@
 			position: relative;
 			border-bottom-style: ridge;
 			border-bottom-color: #C0FF3E;
-			border-bottom-width: 30px;
+			border-bottom-width: 10px;
 			height: 90px;
 			margin-left: 10px;
 			margin-right: 20px;
@@ -563,7 +483,7 @@
 		
 		.applianc .pic {
 			position: absolute;
-			left: 40px;
+			left: 10px;
 			top: 30px;
 		}
 		
@@ -578,7 +498,7 @@
 		}
 		
 		.applianc .titm {
-			padding: 40px 7px 7px 90px
+			padding: 40px 7px 7px 60px
 		}
 		
 		.applianc .pict {
@@ -617,126 +537,99 @@
 			<div class="titm">跳起来打破无限的冰块</div>
 		</div>
 	</div>
-<<<<<<< HEAD
 	<div class="page-box" style="display:block">
-=======
-	<div>
->>>>>>> 32bc48cb73bad0f479713d056787564c984510e1
-		<div class="list">
-			<ul>
-				<li>
-					<a href="#">
-						<div class="pic">
-							<img src="images/28.jpg">
-						</div>
-						<div class="picture">
-							<img src="images/28.jpg">
-						</div>
-					</a>
-				</li>
-			</ul>
-		</div>
-		<ul class="app">
-			<div class="user">
-				<li>
-					<a href="#">
-						<div><img src="images/1.jpg"></div>
-						必备
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div><img src="images/1.jpg"></div>
-						必备
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div><img src="images/1.jpg"></div>
-						必备
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div><img src="images/1.jpg"></div>
-						必备
-					</a>
-				</li>
-				<li>
-					<a href="#">
-						<div><img src="images/1.jpg"></div>
-						必备
-					</a>
-				</li>
+		<div>
+			<div class="list">
+				<ul>
+					<li>
+						<a href="#">
+							<div class="pic">
+								<img src="images/28.jpg">
+							</div>
+							<div class="picture">
+								<img src="images/28.jpg">
+							</div>
+						</a>
+					</li>
+				</ul>
 			</div>
-		</ul>
-		<div class="frame "></div>
-		<div class="jian">
-			<ul>
-				<li>
-					<div class="pic">
-						<img src="images/1.jpg">
-					</div>
-					<div class="titm">
-						<div class="tit">美团</div>
-						<div class="con">
-							<img src="images/1.jpg">
-							<img src="images/1.jpg">
-							<img src="images/1.jpg"> 时尚购物
-						</div>
-						<div class="con">吃货</div>
-					</div>
-					<div class="install">
-						安装
-					</div>
-				</li>
+			<ul class="app">
+				<div class="user">
+					<li>
+						<a href="#">
+							<div><img src="images/1.jpg"></div>
+							必备
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div><img src="images/1.jpg"></div>
+							必备
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div><img src="images/1.jpg"></div>
+							必备
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div><img src="images/1.jpg"></div>
+							必备
+						</a>
+					</li>
+					<li>
+						<a href="#">
+							<div><img src="images/1.jpg"></div>
+							必备
+						</a>
+					</li>
+				</div>
 			</ul>
-			<ul>
-				<li>
-					<div class="pic">
-						<img src="images/1.jpg">
-					</div>
-					<div class="titm">
-						<div class="tit">美团</div>
-						<div class="con">
+			<div class="frame "></div>
+			<div class="jian">
+				<ul>
+					<li>
+						<div class="pic">
 							<img src="images/1.jpg">
-							<img src="images/1.jpg">
-							<img src="images/1.jpg"> 时尚购物
 						</div>
-						<div class="con">吃货</div>
-<<<<<<< HEAD
-=======
-					</div>
-					<div class="install">
-						安装
-					</div>
-				</li>
-			</ul>
+						<div class="titm">
+							<div class="tit">美团</div>
+							<div class="con">
+								<img src="images/1.jpg">
+								<img src="images/1.jpg">
+								<img src="images/1.jpg"> 时尚购物
+							</div>
+							<div class="con">吃货</div>
+						</div>
+						<div class="install">
+							安装
+						</div>
+					</li>
+				</ul>
+				<ul>
+					<li>
+						<div class="pic">
+							<img src="images/1.jpg">
+						</div>
+						<div class="titm">
+							<div class="tit">美团</div>
+							<div class="con">
+								<img src="images/1.jpg">
+								<img src="images/1.jpg">
+								<img src="images/1.jpg"> 时尚购物
+							</div>
+							<div class="con">吃货</div>
+						</div>
+						<div class="install">
+							安装
+						</div>
+					</li>
+				</ul>
+			</div>
 		</div>
 	</div>
-	<div class="apply">
-		<ul>
-			<li>
-				<div class="order">1</div>
-				<div class="pic"><img src="images/1.jpg"></div>
-				<div class="titm">
-					<div class="tit">天天快报</div>
-					<div class="pict">
-						<img src="images/1.jpg" width="10">
-						<img src="images/1.jpg" width="10">
-						<img src="images/1.jpg" width="10">
-						<img src="images/1.jpg" width="10">
-						<img src="images/1.jpg" width="10">
->>>>>>> 32bc48cb73bad0f479713d056787564c984510e1
-					</div>
-					<div class="install">
-						安装
-					</div>
-				</li>
-			</ul>
-		</div>
-	</div>
-<<<<<<< HEAD
 	<div class="page-box">
 		<div class="apply">
 			<ul>
@@ -768,18 +661,69 @@
 							<img src="images/1.jpg" width="10">
 							<img src="images/1.jpg" width="10">
 							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+						</div>
+						<div class="con">新闻</div>
+					</div>
+					<div class="install">安装</div>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<div class="order">3</div>
+					<div class="pic"><img src="images/1.jpg"></div>
+					<div class="titm">
+						<div class="tit">天天快报</div>
+						<div class="pict">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
 						</div>
 						<div class="con">新闻</div>
 					</div>
 					<div class="instal">打开</div>
 				</li>
 			</ul>
+			<ul>
+				<li>
+					<div class="order">4</div>
+					<div class="pic"><img src="images/1.jpg"></div>
+					<div class="titm">
+						<div class="tit">天天快报</div>
+						<div class="pict">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+						</div>
+						<div class="con">新闻</div>
+					</div>
+					<div class="install">安装</div>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<div class="order">5</div>
+					<div class="pic"><img src="images/1.jpg"></div>
+					<div class="titm">
+						<div class="tit">天天快报</div>
+						<div class="pict">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+							<img src="images/1.jpg" width="10">
+						</div>
+						<div class="con">新闻</div>
+					</div>
+					<div class="install">安装</div>
+				</li>
+			</ul>
 		</div>
 	</div>
 	<div class="page-box">
-=======
-	<div>
->>>>>>> 32bc48cb73bad0f479713d056787564c984510e1
 		<div class="menu">
 			<ul>
 				<li>
@@ -804,7 +748,6 @@
 						</div>
 					</a>
 				</li>
-
 				<li>
 					<a href="#">
 						<div class="pic"><img src="images/1.jpg">
@@ -843,53 +786,104 @@
 
 			</ul>
 		</div>
-		<div class="game">
-			<div class="titm">
-				游戏分类
-			</div>
-			<div class="play">
-				<img src="images/1.jpg"> 精品游戏
-				<img src="images/1.jpg">
-			</div>
-		</div>
-		<div class="pastime">
-			<div class="pic">
-				<div>
-					<img src="images/1.jpg">
-<<<<<<< HEAD
+		<div>
+			<div class="game">
+				<div class="titm">
+					游戏分类
 				</div>
-				<div class="titm">动作冒险</div>
-			</div>
-			<div class="title">
-				<div class="titl">
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-				</div>
-			</div>
-			<div class="right"></div>
-		</div>
-		<div class="pastime">
-			<div class="pic">
-				<div>
+				<div class="play">
+					<img src="images/1.jpg"> 精品游戏
 					<img src="images/1.jpg">
 				</div>
-				<div class="titm">动作冒险</div>
 			</div>
-			<div class="title">
-				<div class="titl">
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
+			<div class="pastime">
+				<div class="pic">
+					<div>
+						<img src="images/1.jpg">
+					</div>
+					<div class="titm">动作冒险</div>
+				</div>
+				<div class="title">
+					<div class="titl">
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+					</div>
+				</div>
+				<div class="right"></div>
+			</div>
+			<div class="pastime">
+				<div class="pic">
+					<div>
+						<img src="images/1.jpg">
+					</div>
+					<div class="titm">动作冒险</div>
+				</div>
+				<div class="title">
+					<div class="titl">
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+					</div>
+				</div>
+				<div class="right"></div>
+
+			</div>
+			<div class="righ"></div>
+			<div class="game">
+				<div class="titm">
+					游戏分类
+				</div>
+				<div class="play">
+					<img src="images/1.jpg"> 精品游戏
+					<img src="images/1.jpg">
 				</div>
 			</div>
-			<div class="right"></div>
+			<div class="pastime">
+				<div class="pic">
+					<div>
+						<img src="images/1.jpg">
+					</div>
+					<div class="titm">动作冒险</div>
+				</div>
+				<div class="title">
+					<div class="titl">
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+					</div>
+				</div>
+				<div class="right"></div>
+			</div>
+			<div class="pastime">
+				<div class="pic">
+					<div>
+						<img src="images/1.jpg">
+					</div>
+					<div class="titm">动作冒险</div>
+				</div>
+				<div class="title">
+					<div class="titl">
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+						<a href="#">飞行空站</a>
+					</div>
+				</div>
+				<div class="right"></div>
+
+			</div>
 			<div class="righ"></div>
 		</div>
 	</div>
@@ -993,43 +987,10 @@
 			<div class="pict">
 				<img src="images/17.jpg">
 			</div>
-=======
-				</div>
-				<div class="titm">动作冒险</div>
-			</div>
-			<div class="title">
-				<div class="titl">
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-				</div>
-			</div>
-			<div class="right"></div>
 		</div>
-		<div class="pastime">
-			<div class="pic">
-				<div>
-					<img src="images/1.jpg">
-				</div>
-				<div class="titm">动作冒险</div>
-			</div>
-			<div class="title">
-				<div class="titl">
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-					<a href="#">飞行空站</a>
-				</div>
-			</div>
-			<div class="right"></div>
-			<div class="righ"></div>
->>>>>>> 32bc48cb73bad0f479713d056787564c984510e1
-		</div>
+	</div>
+
+	</div>
 	</div>
 	<script>
 		;(function () {
