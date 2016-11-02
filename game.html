@@ -1,0 +1,1085 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<!-- 约束视口，禁止手机端缩放页面 -->
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0">
+	<title>游戏中心</title>
+	<style>
+		* {
+			/* 去掉内边距 */
+			padding: 0;
+			/* 去掉外边距 */
+			margin: 0;
+			/* 去掉列表样式 */
+			list-style: none;
+			/* 去掉下划线 */
+			text-decoration: none;
+		}
+
+		.nav {
+			background: #CD661D;
+			height: 75px;
+		}
+
+		.nav ul {
+			display: block;
+			margin: auto;
+			width: 50%;
+		}
+
+		.nav .hover {
+			float: left;
+			height: 25px;
+			width: 45px;
+			line-height: 100px;
+			text-align: center;
+			margin-right: 5px;
+			color: #D3D3D3
+		}
+
+		.nav .base {
+			float: left;
+			height: 25px;
+			width: 45px;
+			line-height: 100px;
+			text-align: center;
+			margin-right: 5px;
+			color: #ABABAB;
+		}
+
+		.search {
+			border: 1px solid;
+			border-color: #CCCCCC;
+			margin: 10px 10px 10px 10px;
+		}
+
+		.searc {
+			position: relative;
+			height: 32px;
+			padding-left: 40px;
+			top: 10px;
+		}
+
+		.search .pic {
+			position: absolute;
+			left: 10px;
+			top: -2px;
+		}
+
+		.search .titm {
+			color: #ABABAB;
+			font-size: 1px;
+		}
+
+		.list {
+			margin-left: 10px;
+		}
+
+		.list ul li {
+			float: left;
+			width: 50%;
+		}
+
+		.list li img {
+			width: 96%;
+		}
+
+		.app {
+			position: relative;
+			border-bottom-style: inset;
+			border-bottom-width: 10px;
+			border-bottom-color: #CCCCCC;
+			height: 205px;
+			margin-bottom: 8px;
+		}
+
+		.app ul {
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.app ul li {
+			float: left;
+			width: 20%;
+			text-align: center;
+		}
+
+		.app ul li a {
+			color: #ABABAB;
+		}
+
+		.app ul li a div img {
+			margin: 5px
+		}
+
+		.jian {
+			position: relative;
+			border-bottom-style: inset;
+			border-bottom-width: 1px;
+			border-bottom-color: #CCCCCC;
+			;
+			height: 80px;
+			margin-left: 10px;
+			margin-right: 10px;
+		}
+
+		.jian .pic {
+			position: absolute;
+			left: 0px;
+			top: 8px
+		}
+
+		.jian .pic img {
+			border: 5px solid red;
+			border-width: 1px;
+			border-radius: 10px;
+			border-color: #CCCCCC;
+			padding: 5px 5px 5px 5px
+		}
+
+		.jian .titm {
+			padding: 5px 0px 0px 70px;
+		}
+
+		.jian .titm .tit {
+			margin: 5px;
+		}
+
+		.jian .titm .picc {
+			margin: 5px;
+		}
+
+		.jian .titm .picc span {
+			font-size: 1px;
+			color: #ABABAB;
+		}
+
+		.jian .titm .picc .ad {
+			border: 5px solid red;
+			border-width: 1px;
+			border-radius: 5px;
+			border-color: #CCCCCC;
+			font-size: 1px;
+			padding: 2px 2px 2px 2px;
+		}
+
+		.jian .titm .picc img {
+			width: 10px;
+		}
+
+		.jian .titm .con {
+			color: #ABABAB;
+			font-size: 1px;
+			margin: 5px;
+		}
+
+		.jian .install {
+			position: absolute;
+			right: 0px;
+			top: 20px;
+			border: 5px solid;
+			border-width: 1px;
+			border-radius: 5px;
+			border-color: #00CD00;
+			color: #00CD00;
+			padding: 7px 12px 7px 12px;
+			font-size: 15px;
+		}
+
+		.apply ul {
+			position: relative;
+			margin-top: 20px;
+			margin: 5px 10px 10px 25px;
+			border-bottom-style: ridge;
+			border-bottom-color: #ABABAB;
+			border-bottom-width: 1px;
+			height: 75px;
+		}
+
+		.apply .order {
+			padding: 25px 10px 10px 10px;
+		}
+
+		.apply .pic {
+			position: absolute;
+			left: 30px;
+			top: 0px;
+		}
+
+		.apply .pic img {
+			border: 5px solid;
+			border-width: 1px;
+			border-color: #ABABAB;
+			border-radius: 10px;
+			width: 60px;
+			padding: 2px 2px 2px 2px;
+		}
+
+		.apply .titm {
+			position: absolute;
+			left: 110px;
+			top: 7px;
+		}
+
+		.apply .tit {
+			margin: 1px;
+		}
+
+		.apply .pict {
+			margin: 1px;
+		}
+
+		.apply .con {
+			color: #ABABAB;
+			margin: 1px;
+			font-size: 1px;
+		}
+
+		.apply .install {
+			position: absolute;
+			top: 20px;
+			right: 10px;
+			border: 5px solid;
+			border-width: 1px;
+			border-radius: 5px;
+			border-color: #00CD00;
+			color: #00CD00;
+			padding: 7px 12px 7px 12px;
+			font-size: 1px;
+		}
+
+		.apply .instal {
+			position: absolute;
+			top: 20px;
+			right: 10px;
+			border: 5px solid;
+			border-width: 1px;
+			border-radius: 5px;
+			border-color: #ABABAB;
+			padding: 7px 12px 7px 12px;
+			font-size: 1px;
+		}
+
+		.menu {
+			border-top-style: inset;
+			border-top-width: 10px;
+			border-top-color: #CCCCCC;
+			padding-top: 10px;
+			border-bottom-style: inset;
+			border-bottom-width: 10px;
+			border-bottom-color: #CCCCCC;
+			height: 160px;
+		}
+
+		.menu ul li {
+			float: left;
+			width: 25%;
+		}
+
+		.menu ul li .cla1 {
+			position: relative;
+			display: block;
+			background: #00CD00;
+			text-align: center;
+			margin: 5px 5px 5px 5px;
+			height: 65px;
+			width: 95px
+		}
+
+		.menu ul li .cla2 {
+			position: relative;
+			display: block;
+			background: #FF3030;
+			text-align: center;
+			margin: 5px 5px 5px 5px;
+			height: 65px;
+			width: 95px
+		}
+
+		.menu ul li .cla3 {
+			position: relative;
+			display: block;
+			background: #104E8B;
+			text-align: center;
+			margin: 5px 5px 5px 5px;
+			height: 65px;
+			width: 95px
+		}
+
+		.menu ul li .cla4 {
+			position: relative;
+			display: block;
+			background: yellow;
+			text-align: center;
+			margin: 5px 5px 5px 5px;
+			height: 65px;
+			width: 95px
+		}
+
+		.menu ul li .cla5 {
+			position: relative;
+			display: block;
+			background: fuchsia;
+			text-align: center;
+			margin: 5px 5px 5px 5px;
+			height: 65px;
+			width: 95px
+		}
+
+		.menu ul li .cla6 {
+			position: relative;
+			display: block;
+			background: turquoise;
+			text-align: center;
+			margin: 5px 5px 5px 5px;
+			height: 65px;
+			width: 95px
+		}
+
+		.menu ul li .cla7 {
+			position: relative;
+			display: block;
+			background: #FF4500;
+			text-align: center;
+			margin: 5px 5px 5px 5px;
+			height: 65px;
+			width: 95px
+		}
+
+		.menu ul li .cla8 {
+			position: relative;
+			display: block;
+			background: #FF34B3;
+			text-align: center;
+			margin: 5px 5px 5px 5px;
+			height: 65px;
+			width: 95px
+		}
+
+		.menu ul li a .titm {
+			margin: 2px;
+			color: #E0EEEE;
+			font-size: 1px
+		}
+
+		.menu ul li a .pic img {
+			padding-top: 5px;
+			width: 35px;
+		}
+
+		.game {
+			position: relative;
+		}
+
+		.game .titm {
+			padding: 12px 7px 7px 15px;
+			font-size: 1px;
+		}
+
+		.game .play {
+			position: absolute;
+			top: 12px;
+			right: 10px;
+			text-align: center;
+			font-size: 10px;
+			color: #ABABAB;
+		}
+
+		.game .play img {
+			width: 10px
+		}
+
+		.pastime {
+			position: relative;
+			border-top-style: ridge;
+			height: 100px;
+		}
+
+		.right {
+			border-right-style: ridge;
+			width: 100px;
+			height: 80px;
+			margin-top: -18px;
+		}
+
+		.righ {
+			border-bottom-style: ridge;
+			height: 0px;
+			border-bottom-width: 10px;
+			border-bottom-color: #CCCCCC;
+			margin-bottom: 5px;
+		}
+
+		.pastime .pic {
+			position: absolute;
+			left: 25px;
+			top: 20px;
+			text-align: center;
+		}
+
+		.pastime .pic .titm {
+			margin: 3px;
+			color: #00CD00;
+			font-size: 1px;
+		}
+		.pastime .pic .tit {
+			margin: 3px;
+			color: yellow;
+			font-size: 1px;
+		}
+		.pastime .pic img {
+			width: 40px
+		}
+
+		.pastime .title .titl {
+			padding: 20px 10px 10px 130px;
+		}
+
+		.pastime .title .titl a {
+			float: left;
+			width: 27%;
+			color: #121a2a;
+			letter-spacing: 0px;
+			margin: 8px;
+		}
+
+		.personal {
+			position: relative;
+			border-top-style: inset;
+			border-top-width: 10px;
+			border-top-color: #CCCCCC;
+			border-bottom-style: ridge;
+			height: 125px;
+			border-bottom-width: 10px;
+			border-bottom-color: #CCCCCC;
+		}
+
+		.personal .pic {
+			position: absolute;
+			left: 15px;
+			top: 30px;
+		}
+
+		.personal .pic img {
+			border: 5px solid;
+			border-width: 2px;
+			border-color: #FF7F00;
+			border-radius: 50px;
+			width: 60px;
+			padding: 7px 7px 7px 7px;
+			background: #CCCCCC;
+		}
+
+		.personal .titm {
+			padding: 40px 7px 7px 110px;
+		}
+
+		.personal .titm .tit {
+			margin: 2px;
+		}
+
+		.personal .titm .con {
+			margin: 2px;
+			color: #ABABAB;
+		}
+
+		.personal .titm .pict img {
+			border-radius: 50%;
+			overflow: hidden;
+			width: 20px;
+			margin: 2px;
+		}
+
+		.personal .picture {
+			position: absolute;
+			top: 55px;
+			right: 10px;
+		}
+
+		.personal .picture img {
+			width: 30px;
+		}
+
+		.appliance {
+			position: relative;
+			border-bottom-style: ridge;
+			height: 90px;
+			margin-left: 10px;
+			margin-right: 20px;
+		}
+
+		.appliance .pic {
+			position: absolute;
+			left: 10px;
+			top: 30px;
+		}
+
+		.appliance .pic img {
+			border: 5px solid;
+			border-width: 1px;
+			border-color: #CCCCCC;
+			border-radius: 45px;
+			width: 20px;
+			padding: 7px 7px 7px 7px;
+			background: #CCCCCC;
+		}
+
+		.appliance .titm {
+			padding: 40px 7px 7px 60px
+		}
+
+		.appliance .pict {
+			position: absolute;
+			top: 30px;
+			right: -10px;
+		}
+
+		.appliance .pict img {
+			width: 40px
+		}
+
+		.applianc {
+			position: relative;
+			border-bottom-style: ridge;
+			border-bottom-color:#CCCCCC;
+			border-bottom-width: 10px;
+			height: 90px;
+			margin-left: 10px;
+			margin-right: 20px;
+		}
+
+		.applianc .pic {
+			position: absolute;
+			left: 10px;
+			top: 30px;
+		}
+
+		.applianc .pic img {
+			border: 5px solid;
+			border-width: 1px;
+			border-color: #CD661D;
+			border-radius: 45px;
+			width: 20px;
+			padding: 7px 7px 7px 7px;
+			background: #CCCCCC;
+		}
+
+		.applianc .titm {
+			padding: 40px 7px 7px 60px
+		}
+
+		.applianc .pict {
+			position: absolute;
+			top: 30px;
+			right: -10px;
+		}
+
+		.applianc .pict img {
+			width: 40px
+		}
+
+		.page-box {
+			display: none;
+			/*隐藏*/
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<div class="nav">
+		<ul id="nav">
+			<li class="hover">精品</li>
+			<li class="base">榜单</li>
+			<li class="base">分类</li>
+			<li class="base">我的</li>
+		</ul>
+	</div>
+	<div class="search">
+		<div class="searc">
+			<div class="pic">
+				<img src="images/27.jpg" width="20">
+			</div>
+			<div class="titm">跳起来打破无限的冰块</div>
+		</div>
+	</div>
+	<div class="page-box" style="display:block">
+		<div class="list">
+			<ul>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/28.jpg">
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/29.jpg">
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="app">
+			<ul>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/30.jpg">
+						</div>
+						必备
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/31.jpg">
+						</div>
+						游戏
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/32.jpg">
+						</div>
+						猜你喜欢
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/33.jpg">
+						</div>
+						评测
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/34.jpg">
+						</div>
+						购物
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div>
+			<div class="jian">
+				<div class="pic">
+					<img src="images/35.jpg">
+				</div>
+				<div class="titm">
+					<div class="tit">美团</div>
+					<div class="picc">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<span>时尚购物</span>
+						<span>|</span>
+						<span> 23.9M</span>
+						<span class="ad">广告</span>
+					</div>
+					<div class="con">吃货聚餐大本营</div>
+				</div>
+				<div class="install">安装</div>
+			</div>
+			<div class="jian">
+				<div class="pic">
+					<img src="images/35.jpg">
+				</div>
+				<div class="titm">
+					<div class="tit">美团外卖</div>
+					<div class="picc">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/37.jpg">
+						<span>居家生活</span>
+						<span>|</span>
+						<span> 6.8M</span>
+						<span class="ad">广告</span>
+					</div>
+					<div class="con">美食水果在线超市优惠不停</div>
+				</div>
+				<div class="install">安装</div>
+			</div>
+			<div class="jian">
+				<div class="pic">
+					<img src="images/35.jpg">
+				</div>
+				<div class="titm">
+					<div class="tit">剑侠世界-新时装坐骑</div>
+					<div class="picc">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<span>游戏</span>
+						<span>|</span>
+						<span> 576.9M</span>
+					</div>
+					<div class="con">一生不容错过的浪漫武侠</div>
+				</div>
+				<div class="install">安装</div>
+			</div>
+			<div class="jian">
+				<div class="pic">
+					<img src="images/35.jpg">
+				</div>
+				<div class="titm">
+					<div class="tit">闪电借款</div>
+					<div class="picc">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<span>金融理财</span>
+						<span>|</span>
+						<span> 9.7M</span>
+					</div>
+					<div class="con">10000元现会马上可以提现啦</div>
+				</div>
+				<div class="install">安装</div>
+			</div>
+			<div class="jian">
+				<div class="pic">
+					<img src="images/35.jpg">
+				</div>
+				<div class="titm">
+					<div class="tit">捕鱼达人千炮版（波克捕鱼）</div>
+					<div class="picc">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/36.jpg">
+						<img src="images/37.jpg">
+						<span>游戏</span>
+						<span>|</span>
+						<span>28.2M</span>
+						<span class="ad">广告</span>
+					</div>
+					<div class="con">做一个快乐的捕鱼王</div>
+				</div>
+				<div class="install">安装</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-box">
+		<div class="apply">
+			<ul>
+				<li>
+					<div class="order">1</div>
+					<div class="pic"><img src="images/1.jpg"></div>
+					<div class="titm">
+						<div class="tit">天天快报</div>
+						<div class="pict">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+						</div>
+						<div class="con">新闻资讯14.6M</div>
+					</div>
+					<div class="install">安装</div>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<div class="order">2</div>
+					<div class="pic"><img src="images/1.jpg"></div>
+					<div class="titm">
+						<div class="tit">百度糯米-美食电影</div>
+						<div class="pict">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+						</div>
+						<div class="con">时尚购物29.1M</div>
+					</div>
+					<div class="install">安装</div>
+				</li>
+			</ul>
+			<ul>
+				<li>
+					<div class="order">3</div>
+					<div class="pic"><img src="images/1.jpg"></div>
+					<div class="titm">
+						<div class="tit">全民K歌</div>
+						<div class="pict">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+							<img src="images/36.jpg" width="10">
+							<img src="images/37.jpg" width="10">
+						</div>
+						<div class="con">新闻</div>
+					</div>
+					<div class="instal">打开</div>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+	<div class="page-box">
+		<div class="menu">
+			<ul>
+				<li>
+					<a class="cla1" href="#">
+						<div class="pic"><img src="images/38.jpg" width="90">
+							<div class="titm">
+								掌上阅读
+							</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="cla2" href="#">
+						<div class="pic"><img src="images/39.jpg">
+							<div class="titm">时尚购物</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="cla3" href="#">
+						<div class="pic"><img src="images/40.jpg">
+							<div class="titm">摄影摄像</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="cla4" href="#">
+						<div class="pic"><img src="images/41.jpg">
+							<div class="titm">影音直播</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="cla5" href="#">
+						<div class="pic"><img src="images/42.jpg">
+							<div class="titm">女生频道</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a  class="cla6" href="#">
+						<div class="pic"><img src="images/43.jpg">
+							<div class="titm">累生频道</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="cla7" href="#">
+						<div class="pic"><img src="images/44.jpg">
+							<div class="titm">百发专区</div>
+						</div>
+					</a>
+				</li>
+				<li>
+					<a class="cla8" href="#">
+						<div class="pic"><img src="images/45.jpg">
+							<div class="titm">VR专区</div>
+						</div>
+					</a>
+				</li>
+
+			</ul>
+		</div>
+		<div>
+			<div class="game">
+				<div class="titm">
+					游戏分类
+				</div>
+				<div class="play">
+					<img src="images/1.jpg"> 精品游戏
+					<img src="images/17.jpg">
+				</div>
+			</div>
+			<div class="pastime">
+				<div class="pic">
+					<div>
+						<img src="images/46.jpg">
+					</div>
+					<div class="titm">动作冒险</div>
+				</div>
+				<div class="title">
+					<div class="titl">
+						<a href="#">跑酷闯关</a>
+						<a href="#">网游RPG</a>
+						<a href="#">赛车体育</a>
+						<a href="#">飞行空站</a>
+						<a href="#">动物枪战</a>
+						<a href="#">格斗快打</a>
+					</div>
+				</div>
+				<div class="right"></div>
+			</div>
+			<div class="pastime">
+				<div class="pic">
+					<div>
+						<img src="images/47.jpg">
+					</div>
+					<div class="tit">体育益智</div>
+				</div>
+				<div class="title">
+					<div class="titl">
+						<a href="#">体育创意</a>
+						<a href="#">棋牌桌游</a>
+						<a href="#">模拟经营</a>
+						<a href="#">战争策略</a>
+						<a href="#">塔防迷宫</a>
+						<a href="#">儿童益智</a>
+					</div>
+				</div>
+				<div class="right"></div>
+			</div>
+
+
+
+			</div>
+			<div class="righ"></div>
+		</div>
+	</div>
+	<div class="page-box">
+		<div class="personal">
+			<div class="pic">
+				<img src="images/21.jpg">
+			</div>
+			<div class="titm">
+				<div class="tit">
+					狼族小贝
+				</div>
+				<div class="con">
+					874784692
+				</div>
+				<div class="pict">
+					<img src="images/1.jpg">
+					<img src="images/1.jpg">
+					<img src="images/1.jpg">
+					<img src="images/1.jpg">
+				</div>
+			</div>
+			<div class="picture">
+				<img src="images/17.jpg">
+			</div>
+		</div>
+		<div class="appliance">
+			<div class="pic">
+				<img src="images/1.jpg">
+			</div>
+			<div class="titm">
+				<div class="tit">
+					应用升级
+				</div>
+			</div>
+			<div class="pict">
+				<img src="images/17.jpg">
+			</div>
+		</div>
+		<div class="appliance">
+			<div class="pic">
+				<img src="images/1.jpg">
+			</div>
+			<div class="titm">
+				<div class="tit">
+					下载队列
+				</div>
+			</div>
+			<div class="pict">
+				<img src="images/17.jpg">
+			</div>
+		</div>
+		<div class="applianc">
+			<div class="pic">
+				<img src="images/1.jpg">
+			</div>
+			<div class="titm">
+				<div class="tit">
+					应用卸载
+				</div>
+			</div>
+			<div class="pict">
+				<img src="images/17.jpg">
+			</div>
+		</div>
+		<div class="appliance">
+			<div class="pic">
+				<img src="images/1.jpg">
+			</div>
+			<div class="titm">
+				<div class="tit">
+					我的收藏
+				</div>
+			</div>
+			<div class="pict">
+				<img src="images/17.jpg">
+			</div>
+		</div>
+		<div class="applianc">
+			<div class="pic">
+				<img src="images/1.jpg">
+			</div>
+			<div class="titm">
+				<div class="tit">
+					安装纪录
+				</div>
+			</div>
+			<div class="pict">
+				<img src="images/17.jpg">
+			</div>
+		</div>
+		<div class="applianc">
+			<div class="pic">
+				<img src="images/1.jpg">
+			</div>
+			<div class="titm">
+				<div class="tit">
+					设置
+				</div>
+			</div>
+			<div class="pict">
+				<img src="images/17.jpg">
+			</div>
+		</div>
+	</div>
+
+	</div>
+	</div>
+	<script>
+		;(function () {
+			var nav = document.getElementById('nav') //获取nav
+			var navLi = nav.getElementsByTagName('li') //获取nav下面所有的li标签
+			var pageList = document.getElementsByClassName('page-box') //获取所有的box元素
+			for (var i = 0;i < navLi.length; i++) { //循环所有的li标签
+				navLi[i].index = i
+				navLi[i].onclick = function () { //给所有的li标签绑定click事件
+					for(var i = 0;i < pageList.length;i++) { //获取所有的box元素
+						navLi[i].className = 'base'
+						pageList[i].style.display = 'none' //先隐藏所有的box
+					}
+					this.className = 'hover'
+					pageList[this.index].style.display = 'block' //显示当前对应的box
+				}
+			}
+		})()
+	</script>
+
+
+
+
+</body>
+
+</html>
