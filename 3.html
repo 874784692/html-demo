@@ -2,24 +2,177 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/c.css">
-
-    </style>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 约束视口，禁止手机端缩放页面 -->
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; minimum-scale=1.0; maximum-scale=1.0">
 </head>
+<style>
+	* {
+		/* 去掉内边距 */
+		padding: 0;
+		/* 去掉外边距 */
+		margin: 0;
+		/* 去掉列表样式 */
+		list-style: none;
+		/* 去掉下划线 */
+		text-decoration: none;
+	}
+	
+	.list {
+		margin-left: 10px;
+	}
+	
+	.list ul li {
+		float: left;
+		width: 50%;
+	}
+	
+	.list li img {
+		width: 96%;
+	}
+	
+	.app {
+		position: relative;
+		border-bottom-style: inset;
+		border-bottom-width: 10px;
+		border-bottom-color: #CCCCCC;
+		height: 205px;
+		margin-bottom: 15px;
+	}
+	
+	.app ul {
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.app ul li {
+		float: left;
+		width: 20%;
+		text-align: center;
+	}
+	
+	.app ul li a {
+		color: #ABABAB;
+	}
+	
+	.app ul li a div img {
+		margin: 5px
+	}
+	
+	.jian {
+		position: relative;
+		border-bottom-style: ridge;
+		border-bottom-width: 2px;
+		height: 75px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+	
+	.jian .pic {
+		position: absolute;
+		left: 0px;
+		top: 0px
+	}
+	
+	.jian .pic img {
+		border: 5px solid red;
+		border-width: 1px;
+		border-radius: 10px;
+        border-color: #CCCCCC;
+		padding: 5px 5px 5px 5px
+	}
+    .jian .titm{
+        padding:0px 0px 0px 70px
+    }
+</style>
 
 <body>
-    <div id="wrap">
-        <div id="header">头部</div>
-        <div id="mainbody">
-            <div class="left">主体内容ma</div>
-            <div class="right"></div>
-        </div>
-        <div id="footer">版权部分</div>
+	<div class="page-box" style="display:block">
 
-    </div>
+		<div class="list">
+			<ul>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/28.jpg">
+						</div>
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/29.jpg">
+						</div>
+					</a>
+				</li>
+			</ul>
+		</div>
+		<div class="app">
+			<ul>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/30.jpg">
+						</div>
+						必备
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/31.jpg">
+						</div>
+						游戏
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/32.jpg">
+						</div>
+						猜你喜欢
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/33.jpg">
+						</div>
+						评测
+					</a>
+				</li>
+				<li>
+					<a href="#">
+						<div>
+							<img src="images/34.jpg">
+						</div>
+						购物
+					</a>
+				</li>
+			</ul>
+		</div>
 
+		<div class="jian">
+			<div class="pic">
+				<img src="images/35.jpg">
+			</div>
+			<div class="titm">
+				<div>美团</div>
+				<div class="picc">
+					<img src="images/36.jpg">
+					<img src="images/36.jpg">
+					<img src="images/36.jpg">
+					<img src="images/36.jpg">
+					<img src="images/36.jpg"> 时尚购物3.9M
+					<span>
+						广告
+					</span>
+				</div>
+                <div>吃货聚餐大本营</div>
+			</div>
+		</div>
+	</div>
 </body>
 
 </html>
